@@ -24,8 +24,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.util.Log;
 
-
-
 import net.micode.notes.data.Notes;
 import net.micode.notes.data.Notes.DataColumns;
 import net.micode.notes.data.Notes.NoteColumns;

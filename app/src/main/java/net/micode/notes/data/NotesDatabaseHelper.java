@@ -26,9 +26,7 @@ import net.micode.notes.data.Notes.DataColumns;
 import net.micode.notes.data.Notes.DataConstants;
 import net.micode.notes.data.Notes.NoteColumns;
 
-/**
- *  数据库基本操作
- */
+
 public class NotesDatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "note.db";
 
@@ -208,14 +206,13 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
         "  WHERE " + NoteColumns.PARENT_ID + "=old." + NoteColumns.ID + ";" +
         " END";
 
-    /********************以上将命令封装为字符串*************************/
     public NotesDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
     public void createNoteTable(SQLiteDatabase db) {
         db.execSQL(CREATE_NOTE_TABLE_SQL);
-        reCreateNoteTableTriggers(db); //检查是否创建成功
+        reCreateNoteTableTriggers(db);
         createSystemFolder(db);
         Log.d(TAG, "note table has been created");
     }
@@ -363,4 +360,3 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
                 + " INTEGER NOT NULL DEFAULT 0");
     }
 }
-//V=version?

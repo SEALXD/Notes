@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.micode.notes.test">
 
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
 
     <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />

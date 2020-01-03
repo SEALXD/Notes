@@ -34,12 +34,8 @@ import net.micode.notes.data.Notes.DataColumns;
 import net.micode.notes.data.Notes.NoteColumns;
 import net.micode.notes.data.NotesDatabaseHelper.TABLE;
 
-/**
- * ContentProvider 安卓四大组件之一  不同应用之间数据共享，向其他应用提供数据
- * https://www.jianshu.com/p/5e13d1fec9c9  使用方法
- */
+
 public class NotesProvider extends ContentProvider {
-    //ContentProvider 安卓四大组件之一  不同应用之间数据共享，向其他应用提供数据
     private static final UriMatcher mMatcher;
 
     private NotesDatabaseHelper mHelper;

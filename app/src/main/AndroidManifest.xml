@@ -41,6 +41,8 @@
             android:uiOptions="splitActionBarWhenNarrow"
             android:theme="@style/NoteTheme"
             android:windowSoftInputMode="adjustPan" >
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -53,6 +55,7 @@
             android:launchMode="singleTop"
             android:theme="@style/NoteTheme"
             >
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
