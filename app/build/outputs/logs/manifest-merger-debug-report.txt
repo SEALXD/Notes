@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-147:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-147:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-147:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-147:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-147:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-147:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-147:12
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
 	package
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:19:5-31
 		INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml
@@ -58,7 +58,7 @@ ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:31:22-78
 application
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:33:5-146:19
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:33:5-151:19
 	android:label
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:35:9-41
 	android:icon
@@ -207,18 +207,24 @@ ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:131:9-136:20
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:135:13-60
 	android:name
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:132:13-71
+activity#net.micode.notes.doodle.DoodleActivity
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:138:9-141:20
+	android:theme
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:140:13-60
+	android:name
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:139:13-66
 service#net.micode.notes.gtask.remote.GTaskSyncService
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:138:9-141:19
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:143:9-146:19
 	android:exported
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:140:13-37
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:145:13-37
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:139:13-74
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:144:13-74
 meta-data#android.app.default_searchable
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:143:9-145:52
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:148:9-150:52
 	android:value
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:145:13-49
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:150:13-49
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:144:13-58
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:149:13-58
 uses-sdk
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml

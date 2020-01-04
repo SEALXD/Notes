@@ -43,6 +43,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -55,6 +56,7 @@ import android.widget.Toast;
 import net.micode.notes.R;
 import net.micode.notes.data.Notes;
 import net.micode.notes.data.Notes.TextNote;
+import net.micode.notes.doodle.DoodleActivity;
 import net.micode.notes.model.WorkingNote;
 import net.micode.notes.model.WorkingNote.NoteSettingChangedListener;
 import net.micode.notes.tool.DataUtils;
@@ -149,10 +151,26 @@ public class NoteEditActivity extends Activity implements OnClickListener,
     private String mUserQuery;
     private Pattern mPattern;
 
+    private Button paintButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.note_edit);
+        paintButton=(Button) findViewById(R.id.paint_button);
+        //为涂鸦按钮添加点击事件
+        paintButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*
+                第一个参数:上下文对象this
+                第二个参数:目标文件
+                 */
+                Intent intent = new Intent(NoteEditActivity.this, DoodleActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         if (savedInstanceState == null && !initActivityState(getIntent())) {
             finish();

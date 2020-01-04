@@ -135,6 +135,11 @@
             android:theme="@android:style/Theme.Holo.Light" >
         </activity>
 
+        <activity
+            android:name="net.micode.notes.doodle.DoodleActivity"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+
         <service
             android:name="net.micode.notes.gtask.remote.GTaskSyncService"
             android:exported="false" >
