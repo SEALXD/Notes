@@ -144,10 +144,13 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Picture;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -157,9 +160,14 @@ import android.widget.Toast;
 
 import net.micode.notes.R;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
+
+import static android.content.ContentValues.TAG;
 
 public class DoodleActivity extends Activity {
     private ImageView iv;
@@ -170,8 +178,8 @@ public class DoodleActivity extends Activity {
     int startX;
     int startY;
 
-    private String[] wideList={"5","10","15","20","25","30"};//单选列表
-    private String[] colorList={"红","黄","绿","蓝","青","灰","黑"};//单选列表
+    private String[] wideList = {"5", "10", "15", "20", "25", "30"};//单选列表
+    private String[] colorList = {"红", "黄", "绿", "蓝", "青", "灰", "黑"};//单选列表
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,6 +219,7 @@ public class DoodleActivity extends Activity {
             }
         });
     }
+
     private void Drows(MotionEvent event) {
         canvas.drawLine(xx, yy, xxxx, yyyy, paint);
         startX = (int) event.getX();
@@ -250,7 +259,7 @@ public class DoodleActivity extends Activity {
     }
 
     public void clickBt(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btSave:
                 save();  //保存
                 break;
@@ -269,13 +278,13 @@ public class DoodleActivity extends Activity {
     }
 
     private void changeColor() {
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setSingleChoiceItems(colorList,-1,new DialogInterface.OnClickListener(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setSingleChoiceItems(colorList, -1, new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int i) {
-                String color=colorList[i];
-                switch (color){
+                String color = colorList[i];
+                switch (color) {
                     case "红":
                         paint.setColor(Color.RED);
                         break;
@@ -302,53 +311,66 @@ public class DoodleActivity extends Activity {
             }
         });
         /*添加对话框中取消按钮点击事件*/
-        builder.setNegativeButton("取消",new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog,int which) {
+            public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();//关闭对话框
             }
         });
-        AlertDialog dialog=builder.create();//获取dialog
+        AlertDialog dialog = builder.create();//获取dialog
         dialog.show();//显示对话框  
     }
 
     private void changeWide() {
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setSingleChoiceItems(wideList,-1,new DialogInterface.OnClickListener(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setSingleChoiceItems(wideList, -1, new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int i) {
-                String wide=wideList[i];
+                String wide = wideList[i];
                 paint.setStrokeWidth(Integer.parseInt(wide));
                 dialog.dismiss();//关闭对话框
             }
         });
         /*添加对话框中取消按钮点击事件*/
-        builder.setNegativeButton("取消",new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog,int which) {
+            public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();//关闭对话框
             }
         });
-        AlertDialog dialog=builder.create();//获取dialog
+        AlertDialog dialog = builder.create();//获取dialog
         dialog.show();//显示对话框  
     }
 
     private void save() {
+        /*******************保存图片****************/
+        String newPath = getExternalFilesDir(null) + "/" + System.currentTimeMillis()+ ".jpg";
+        Log.i(TAG,"directory_pictures="+newPath);
+        FileOutputStream fileOutputStream = null;
         try {
-            File file = new File(Environment.getExternalStorageDirectory(), System.currentTimeMillis() + ".jpg");
-            OutputStream stream = new FileOutputStream(file);
-            baseBitmap.compress(CompressFormat.JPEG, 100, stream);
-            stream.close();
-            // 模拟一个广播，通知系统sdcard被挂载
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-            intent.setData(Uri.fromFile(Environment.getExternalStorageDirectory()));
-            sendBroadcast(intent);
+            fileOutputStream = new FileOutputStream(newPath);
+            baseBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+            fileOutputStream.flush();
+            fileOutputStream.close();
             Toast.makeText(this, "保存图片成功", Toast.LENGTH_LONG).show();
-        } catch (Exception e) {
-            Toast.makeText(this, "保存图片失败", Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
+            Toast.makeText(this, "保存图片失败", Toast.LENGTH_LONG).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "保存图片失败", Toast.LENGTH_LONG).show();
         }
+
+        /********保存成功后如果不扫描SD卡，保存的文件不会显示********/
+        //  Intent intent = new Intent(Intent.ACTION_MEDIA_MOUNTED); //这是刷新SD卡
+        Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);  // 这是刷新单个文件
+        Uri uri = Uri.fromFile(new File(newPath));
+        intent.setData(uri);
+        sendBroadcast(intent);
+        Log.i(TAG,"扫描完成"+newPath);
+        Toast.makeText(this, "扫描完成", Toast.LENGTH_LONG).show();
+
     }
+
 }
