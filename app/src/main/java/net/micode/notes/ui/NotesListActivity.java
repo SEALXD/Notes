@@ -78,6 +78,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashSet;
 
+import pl.com.salsoft.sqlitestudioremote.SQLiteStudioService;
+
 public class NotesListActivity extends Activity implements OnClickListener, OnItemLongClickListener {
     private static final int FOLDER_NOTE_LIST_QUERY_TOKEN = 0;
 
@@ -139,12 +141,13 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_list);
-        initResources();
+        initResources(); //初始化界面内容，不包含数据
+        SQLiteStudioService.instance().start(this); //用于可视化数据库
 
         /**
          * Insert an introduction when user firstly use this application
          */
-        setAppInfoFromRawRes();
+        setAppInfoFromRawRes();//初始化列表，显示欢迎界面
     }
 
     @Override
@@ -162,7 +165,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         if (!sp.getBoolean(PREFERENCE_ADD_INTRODUCTION, false)) {
             StringBuilder sb = new StringBuilder();
             InputStream in = null;
-            try {
+            try {  //显示欢迎信息
                  in = getResources().openRawResource(R.raw.introduction);
                 if (in != null) {
                     InputStreamReader isr = new InputStreamReader(in);
@@ -193,7 +196,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             WorkingNote note = WorkingNote.createEmptyNote(this, Notes.ID_ROOT_FOLDER,
                     AppWidgetManager.INVALID_APPWIDGET_ID, Notes.TYPE_WIDGET_INVALIDE,
                     ResourceParser.RED);
-            note.setWorkingText(sb.toString());
+            note.setWorkingText(sb.toString(),null); //传空值 默认欢迎界面没有涂鸦
             if (note.saveNote()) {
                 sp.edit().putBoolean(PREFERENCE_ADD_INTRODUCTION, true).commit();
             } else {
@@ -209,6 +212,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         startAsyncNotesListQuery();
     }
 
+    /**
+     * 初始化界面信息
+     * */
     private void initResources() {
         mContentResolver = this.getContentResolver();
         mBackgroundQueryHandler = new BackgroundQueryHandler(this.getContentResolver());
@@ -556,6 +562,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         mTitleBar.setVisibility(View.VISIBLE);
     }
 
+    /**
+     * 点击按钮创建新笔记
+     * */
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_new_note:

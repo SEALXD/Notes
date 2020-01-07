@@ -27,8 +27,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -67,6 +73,7 @@ import net.micode.notes.ui.NoteEditText.OnTextViewChangeListener;
 import net.micode.notes.widget.NoteWidgetProvider_2x;
 import net.micode.notes.widget.NoteWidgetProvider_4x;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -152,12 +159,16 @@ public class NoteEditActivity extends Activity implements OnClickListener,
     private Pattern mPattern;
 
     private Button paintButton;
+    private ImageView mImageview;
+    public String doodlePath=null; //涂鸦存储路径
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.note_edit);
         paintButton=(Button) findViewById(R.id.paint_button);
+
+
         //为涂鸦按钮添加点击事件
         paintButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,8 +178,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                 第二个参数:目标文件
                  */
                 Intent intent = new Intent(NoteEditActivity.this, DoodleActivity.class);
-                startActivity(intent);
-
+                startActivityForResult(intent,0);
             }
         });
 
@@ -177,6 +187,23 @@ public class NoteEditActivity extends Activity implements OnClickListener,
             return;
         }
         initResources();
+    }
+
+    /***
+     * 接受返回参数，即图片路径
+     * */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+           doodlePath = data.getStringExtra("doodlepath");
+        if(doodlePath==null){
+            Log.i("doodle","failed");
+        }else{
+            Log.i("doodle","onActivityResult"+doodlePath);
+            mImageview.setVisibility(View.VISIBLE);
+            Bitmap bitmap = BitmapFactory.decodeFile(doodlePath);
+            mImageview.setImageBitmap(bitmap);
+        }
     }
 
     /**
@@ -392,6 +419,17 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         mNoteEditor = (EditText) findViewById(R.id.note_edit_view);
         mNoteEditorPanel = findViewById(R.id.sv_note_edit);
         mNoteBgColorSelector = findViewById(R.id.note_bg_color_selector);
+
+        mImageview = (ImageView) findViewById(R.id.doodle_pic); //初始化
+
+        if(mWorkingNote.getDoodlePath()==null){
+            mImageview.setVisibility(View.INVISIBLE);//如果路径为空，隐藏该模块
+        }else{
+            mImageview.setVisibility(View.VISIBLE);
+            Bitmap bitmap = BitmapFactory.decodeFile(mWorkingNote.getDoodlePath());
+            mImageview.setImageBitmap(bitmap);
+        }
+
         for (int id : sBgSelectorBtnsMap.keySet()) {
             ImageView iv = (ImageView) findViewById(id);
             iv.setOnClickListener(this);
@@ -447,8 +485,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         int id = v.getId();
         if (id == R.id.btn_set_bg_color) {
             mNoteBgColorSelector.setVisibility(View.VISIBLE);
-            findViewById(sBgSelectorSelectionMap.get(mWorkingNote.getBgColorId())).setVisibility(
-                    -                    View.VISIBLE);
+            findViewById(sBgSelectorSelectionMap.get(mWorkingNote.getBgColorId())).setVisibility(View.VISIBLE);
         } else if (sBgSelectorBtnsMap.containsKey(id)) {
             findViewById(sBgSelectorSelectionMap.get(mWorkingNote.getBgColorId())).setVisibility(
                     View.GONE);
@@ -470,12 +507,12 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         }
     }
 
+    //back键的按下事件
     @Override
     public void onBackPressed() {
         if(clearSettingState()) {
             return;
         }
-
         saveNote();
         super.onBackPressed();
     }
@@ -792,7 +829,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         } else {
             if (!getWorkingText()) {
                 mWorkingNote.setWorkingText(mWorkingNote.getContent().replace(TAG_UNCHECKED + " ",
-                        ""));
+                        ""),doodlePath);
             }
             mNoteEditor.setText(getHighlightQueryResult(mWorkingNote.getContent(), mUserQuery));
             mEditTextList.setVisibility(View.GONE);
@@ -816,9 +853,12 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                     }
                 }
             }
-            mWorkingNote.setWorkingText(sb.toString());
+            mWorkingNote.setWorkingText(sb.toString(),doodlePath);
         } else {
-            mWorkingNote.setWorkingText(mNoteEditor.getText().toString());
+            //mNoteEditor是EditText类型 直接获取文本框内容
+            //在这里加上图片路径
+            Log.i("doodle","getWorkingText==="+doodlePath);
+            mWorkingNote.setWorkingText(mNoteEditor.getText().toString(),doodlePath);
         }
         return hasChecked;
     }
@@ -888,4 +928,6 @@ public class NoteEditActivity extends Activity implements OnClickListener,
     private void showToast(int resId, int duration) {
         Toast.makeText(this, resId, duration).show();
     }
+
+
 }

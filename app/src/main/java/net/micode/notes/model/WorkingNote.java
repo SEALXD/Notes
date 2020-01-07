@@ -41,6 +41,8 @@ public class WorkingNote {
     private String mContent;
     // Note mode
     private int mMode;
+    //Note Doodle
+    private String mDoodlePath;
 
     private long mAlertDate;
 
@@ -62,6 +64,7 @@ public class WorkingNote {
 
     private NoteSettingChangedListener mNoteSettingStatusListener;
 
+
     public static final String[] DATA_PROJECTION = new String[] {
             DataColumns.ID,
             DataColumns.CONTENT,
@@ -70,6 +73,7 @@ public class WorkingNote {
             DataColumns.DATA2,
             DataColumns.DATA3,
             DataColumns.DATA4,
+            DataColumns.DOODLEPATH
     };
 
     public static final String[] NOTE_PROJECTION = new String[] {
@@ -88,6 +92,8 @@ public class WorkingNote {
     private static final int DATA_MIME_TYPE_COLUMN = 2;
 
     private static final int DATA_MODE_COLUMN = 3;
+
+    private static final int DATA_DOODLEPATH_COLUMN = 7; //在 DATA_PROJECTION中是第七个元素
 
     private static final int NOTE_PARENT_ID_COLUMN = 0;
 
@@ -112,6 +118,7 @@ public class WorkingNote {
         mIsDeleted = false;
         mMode = 0;
         mWidgetType = Notes.TYPE_WIDGET_INVALIDE;
+        mDoodlePath=null;
     }
 
     // Existing note construct
@@ -124,6 +131,9 @@ public class WorkingNote {
         loadNote();
     }
 
+    /**
+     * 从数据库查询Note信息
+     * */
     private void loadNote() {
         Cursor cursor = mContext.getContentResolver().query(
                 ContentUris.withAppendedId(Notes.CONTENT_NOTE_URI, mNoteId), NOTE_PROJECTION, null,
@@ -146,6 +156,9 @@ public class WorkingNote {
         loadNoteData();
     }
 
+    /**
+     * 根据noteID从数据库查询Note内容
+     * */
     private void loadNoteData() {
         Cursor cursor = mContext.getContentResolver().query(Notes.CONTENT_DATA_URI, DATA_PROJECTION,
                 DataColumns.NOTE_ID + "=?", new String[] {
@@ -158,8 +171,10 @@ public class WorkingNote {
                     String type = cursor.getString(DATA_MIME_TYPE_COLUMN);
                     if (DataConstants.NOTE.equals(type)) {
                         mContent = cursor.getString(DATA_CONTENT_COLUMN);
+                        mDoodlePath = cursor.getString(DATA_DOODLEPATH_COLUMN);//获取存储的DOODLEPATH
                         mMode = cursor.getInt(DATA_MODE_COLUMN);
                         mNote.setTextDataId(cursor.getLong(DATA_ID_COLUMN));
+                        mNote.setDoodleDataId(cursor.getLong(DATA_ID_COLUMN));//将doodleid与dataID对应
                     } else if (DataConstants.CALL_NOTE.equals(type)) {
                         mNote.setCallDataId(cursor.getLong(DATA_ID_COLUMN));
                     } else {
@@ -216,6 +231,9 @@ public class WorkingNote {
         return mNoteId > 0;
     }
 
+    /**
+     * 判断是否需要保存   图片这个如何判断？
+     * */
     private boolean isWorthSaving() {
         if (mIsDeleted || (!existInDatabase() && TextUtils.isEmpty(mContent))
                 || (existInDatabase() && !mNote.isLocalModified())) {
@@ -281,10 +299,16 @@ public class WorkingNote {
         }
     }
 
-    public void setWorkingText(String text) {
+    //这里补充图片路径
+    public void setWorkingText(String text,String path) {
         if (!TextUtils.equals(mContent, text)) {
             mContent = text;
             mNote.setTextData(DataColumns.CONTENT, mContent);
+        }
+        if(path!=null){
+            mDoodlePath = path;
+            mNote.setDoodlePath(DataColumns.DOODLEPATH,mDoodlePath);
+            Log.i(TAG,"setWorkingText==="+mDoodlePath);
         }
     }
 
@@ -300,6 +324,9 @@ public class WorkingNote {
 
     public String getContent() {
         return mContent;
+    }
+    public String getDoodlePath() {
+        return mDoodlePath;
     }
 
     public long getAlertDate() {

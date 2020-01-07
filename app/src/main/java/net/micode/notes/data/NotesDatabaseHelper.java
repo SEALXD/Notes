@@ -44,6 +44,9 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
 
     private static NotesDatabaseHelper mInstance;
 
+    /**
+     * 创建NOTE表
+     * */
     private static final String CREATE_NOTE_TABLE_SQL =
         "CREATE TABLE " + TABLE.NOTE + "(" +
             NoteColumns.ID + " INTEGER PRIMARY KEY," +
@@ -65,6 +68,9 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
             NoteColumns.VERSION + " INTEGER NOT NULL DEFAULT 0" +
         ")";
 
+    /**
+     * 创建DATA表
+     * */
     private static final String CREATE_DATA_TABLE_SQL =
         "CREATE TABLE " + TABLE.DATA + "(" +
             DataColumns.ID + " INTEGER PRIMARY KEY," +
@@ -73,6 +79,7 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
             NoteColumns.CREATED_DATE + " INTEGER NOT NULL DEFAULT (strftime('%s','now') * 1000)," +
             NoteColumns.MODIFIED_DATE + " INTEGER NOT NULL DEFAULT (strftime('%s','now') * 1000)," +
             DataColumns.CONTENT + " TEXT NOT NULL DEFAULT ''," +
+            DataColumns.DOODLEPATH + " TEXT ,"+ //添加涂鸦存储路径
             DataColumns.DATA1 + " INTEGER," +
             DataColumns.DATA2 + " INTEGER," +
             DataColumns.DATA3 + " TEXT NOT NULL DEFAULT ''," +
@@ -135,6 +142,7 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
         " END";
 
     /**
+     * 笔记内容的增，改，删  对NOTE表更新
      * Update note's content when insert data with type {@link DataConstants#NOTE}
      */
     private static final String DATA_UPDATE_NOTE_CONTENT_ON_INSERT_TRIGGER =
@@ -174,6 +182,7 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
         " END";
 
     /**
+     * 删除已删除note的内容
      * Delete datas belong to note which has been deleted
      */
     private static final String NOTE_DELETE_DATA_ON_DELETE_TRIGGER =
@@ -185,6 +194,7 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
         " END";
 
     /**
+     * 文件夹相关
      * Delete notes belong to folder which has been deleted
      */
     private static final String FOLDER_DELETE_NOTES_ON_DELETE_TRIGGER =
@@ -363,4 +373,4 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
                 + " INTEGER NOT NULL DEFAULT 0");
     }
 }
-//V=version?
+//V=version 对数据库进行修改时会更新

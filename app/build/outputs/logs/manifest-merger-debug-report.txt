@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
-INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-152:12
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
+INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
 	package
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:19:5-31
 		INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml
@@ -58,173 +58,173 @@ ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:31:22-78
 application
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:33:5-151:19
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:34:5-152:19
 	android:label
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:35:9-41
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:36:9-41
 	android:icon
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:34:9-42
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:35:9-42
 activity#net.micode.notes.ui.NotesListActivity
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:36:9-48:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:37:9-49:20
 	android:label
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:39:13-45
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:40:13-45
 	android:launchMode
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:40:13-43
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:41:13-43
 	android:windowSoftInputMode
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:43:13-52
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:44:13-52
 	android:uiOptions
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:41:13-57
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:42:13-57
 	android:configChanges
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:38:13-74
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:39:13-74
 	android:theme
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:42:13-45
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:43:13-45
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:37:13-49
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:38:13-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:44:13-47:29
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:45:13-48:29
 action#android.intent.action.MAIN
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:45:17-69
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:46:17-69
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:45:25-66
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:46:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:46:17-77
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:46:27-74
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:47:27-74
 activity#net.micode.notes.ui.NoteEditActivity
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:50:9-78:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:51:9-79:20
 	android:launchMode
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:53:13-43
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:54:13-43
 	android:configChanges
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:52:13-74
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:53:13-74
 	android:theme
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:54:13-45
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:55:13-45
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:51:13-48
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:52:13-48
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.item/call_note+data:mimeType:vnd.android.cursor.item/text_note
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:56:13-61:29
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:57:13-62:29
 action#android.intent.action.VIEW
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:57:17-69
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:58:17-69
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:57:25-66
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:58:25-66
 category#android.intent.category.DEFAULT
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:58:17-76
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:59:17-76
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:58:27-73
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:59:27-73
 data
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:59:17-78
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:60:17-78
 	android:mimeType
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:59:23-75
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:60:23-75
 intent-filter#action:name:android.intent.action.INSERT_OR_EDIT+category:name:android.intent.category.DEFAULT+data:mimeType:vnd.android.cursor.item/call_note+data:mimeType:vnd.android.cursor.item/text_note
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:63:13-68:29
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:64:13-69:29
 action#android.intent.action.INSERT_OR_EDIT
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:64:17-79
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:65:17-79
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:64:25-76
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:65:25-76
 intent-filter#action:name:android.intent.action.SEARCH+category:name:android.intent.category.DEFAULT
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:70:13-73:29
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:71:13-74:29
 action#android.intent.action.SEARCH
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:71:17-71
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:72:17-71
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:71:25-68
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:72:25-68
 meta-data#android.app.searchable
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:75:13-77:54
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:76:13-78:54
 	android:resource
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:77:17-51
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:78:17-51
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:76:17-54
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:77:17-54
 provider#net.micode.notes.data.NotesProvider
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:80:9-83:43
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:81:9-84:43
 	android:authorities
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:82:13-47
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:83:13-47
 	android:multiprocess
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:83:13-40
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:84:13-40
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:81:13-63
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:82:13-63
 receiver#net.micode.notes.widget.NoteWidgetProvider_2x
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:85:9-97:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:86:9-98:20
 	android:label
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:87:13-50
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:88:13-50
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:86:13-57
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:87:13-57
 intent-filter#action:name:android.appwidget.action.APPWIDGET_DELETED+action:name:android.appwidget.action.APPWIDGET_UPDATE+action:name:android.intent.action.PRIVACY_MODE_CHANGED
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:88:13-92:29
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:89:13-93:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:89:17-84
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:90:17-84
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:89:25-81
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:90:25-81
 action#android.appwidget.action.APPWIDGET_DELETED
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:90:17-85
-	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:90:25-82
-action#android.intent.action.PRIVACY_MODE_CHANGED
 ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:91:17-85
 	android:name
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:91:25-82
+action#android.intent.action.PRIVACY_MODE_CHANGED
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:92:17-85
+	android:name
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:92:25-82
 meta-data#android.appwidget.provider
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:94:13-96:58
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:95:13-97:58
 	android:resource
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:96:17-55
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:97:17-55
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:95:17-58
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:96:17-58
 receiver#net.micode.notes.widget.NoteWidgetProvider_4x
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:98:9-111:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:99:9-112:20
 	android:label
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:100:13-50
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:101:13-50
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:99:13-57
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:100:13-57
 receiver#net.micode.notes.ui.AlarmInitReceiver
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:113:9-117:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:114:9-118:20
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:113:19-55
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:114:19-55
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:114:13-116:29
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:115:13-117:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:115:17-79
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:116:17-79
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:115:25-76
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:116:25-76
 receiver#net.micode.notes.ui.AlarmReceiver
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:119:9-122:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:120:9-123:20
 	android:process
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:121:13-38
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:122:13-38
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:120:13-61
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:121:13-61
 activity#net.micode.notes.ui.AlarmAlertActivity
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:124:9-129:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:125:9-130:20
 	android:label
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:126:13-45
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:127:13-45
 	android:launchMode
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:127:13-48
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:128:13-48
 	android:theme
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:128:13-75
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:129:13-75
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:125:13-50
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:126:13-50
 activity#net.micode.notes.ui.NotesPreferenceActivity
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:131:9-136:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:132:9-137:20
 	android:label
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:133:13-54
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:134:13-54
 	android:launchMode
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:134:13-43
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:135:13-43
 	android:theme
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:135:13-60
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:136:13-60
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:132:13-71
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:133:13-71
 activity#net.micode.notes.doodle.DoodleActivity
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:138:9-141:20
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:139:9-142:20
 	android:theme
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:140:13-60
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:141:13-60
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:139:13-66
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:140:13-66
 service#net.micode.notes.gtask.remote.GTaskSyncService
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:143:9-146:19
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:144:9-147:19
 	android:exported
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:145:13-37
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:146:13-37
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:144:13-74
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:145:13-74
 meta-data#android.app.default_searchable
-ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:148:9-150:52
+ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:149:9-151:52
 	android:value
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:150:13-49
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:151:13-49
 	android:name
-		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:149:13-58
+		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:150:13-58
 uses-sdk
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml

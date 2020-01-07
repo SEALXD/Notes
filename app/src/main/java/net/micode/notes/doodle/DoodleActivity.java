@@ -1,135 +1,3 @@
-//package net.micode.notes.doodle;
-//
-//import java.io.File;
-//import java.io.FileNotFoundException;
-//import java.io.FileOutputStream;
-//import java.text.SimpleDateFormat;
-//import java.util.Date;
-//
-//import android.app.Activity;
-//import android.graphics.Bitmap;
-//import android.graphics.Bitmap.CompressFormat;
-//import android.graphics.Bitmap.Config;
-//import android.graphics.Canvas;
-//import android.graphics.Color;
-//import android.graphics.Paint;
-//import android.os.Bundle;
-//import android.os.Environment;
-//import android.view.MotionEvent;
-//import android.view.View;
-//import android.view.View.OnClickListener;
-//import android.view.View.OnTouchListener;
-//import android.widget.Button;
-//import android.widget.ImageView;
-//import android.widget.Toast;
-//
-//import net.micode.notes.R;
-//
-//public class DoodleActivity extends Activity implements OnClickListener {
-//    private ImageView imageview=null;
-//    private Button clear=null;
-//    private Button save=null;
-//    private MyOntouchListener touchlistener;//手势监听事件
-//    private Bitmap bitmap;
-//    private Canvas canvas;//画板
-//    private Paint paint;//画笔
-//    private int DownX=0;//按下时的横坐标
-//    private int DownY=0;//按下时有竖坐标
-//    private int MoveX=0;//移动时有横坐标
-//    private int MoveY=0;//移动时有竖坐标
-//    private Toast toast=null;//消息提示框
-//    private HandWrite handWrite = null;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState){
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.doodle);
-//        initview();
-//    }
-//
-//    private void initview(){
-//        if(imageview==null) {
-//            imageview = (ImageView) this.findViewById(R.id.imageview);
-//        }
-//        if(clear==null) {
-//            clear = (Button) this.findViewById(R.id.clear);
-//        }
-//        if(save==null) {
-//            clear = (Button) this.findViewById(R.id.clear);
-//        }
-//        if(touchlistener==null) {
-//            touchlistener=new MyOntouchListener();
-//        }
-//        imageview.setOnTouchListener(touchlistener);
-//        clear.setOnClickListener(this);
-//        save.setOnClickListener(this);
-//    }
-//
-//    private class MyOntouchListener implements OnTouchListener{
-//        @Override
-//        public boolean onTouch(View v,MotionEvent event){
-//            int event_action=event.getAction();
-//            switch(event.getAction()){
-//                case MotionEvent.ACTION_DOWN:
-//                    initbitmap();
-//                    DownX=(int)event.getX();
-//                    DownY=(int)event.getY();
-//                    break;
-//                case MotionEvent.ACTION_MOVE:
-//                    MoveX=(int)event.getX();
-//                    MoveY=(int)event.getY();
-//                    if(canvas==null){
-//                        initbitmap();
-//                    }
-//                    canvas.drawLine(DownX,DownY,MoveX,MoveY,paint);
-//                    DownX=MoveX;
-//                    DownY=MoveY;
-//                    imageview.setImageBitmap(bitmap);
-//                    break;
-//                case MotionEvent.ACTION_UP:
-//                    break;
-//            }
-//            return true;
-//        }
-//    }
-//    private  void initmap(){
-//        if (bitmap==null){
-//            bitmap=Bitmap.createBitmap(imageview.getWidth(),imageview.getHeight(),Config.ARGB_4444);
-//            canvas=new Canvas(bitmap);
-//            paint=new Paint();
-//            paint.setColor(Color.RED);
-//            paint.setStrokeWidth(5);
-//            canvas.drawColor(Color.GREEN);
-//        }
-//        imageview.setImageBitmap(bitmap);
-//    }
-//
-//    private void save(){
-//        //获取sd卡路径
-//        File CacheDir=Environment.getExternalStorageState().endsWith(Environment.MEDIA_MOUNTED)? Environment.getExternalStorageDirectory():getCacheDir();
-//        Date date=new Date();
-//        SimpleDateFormat sdf=new SimpleDateFormat("yyyy_MM_DD_HH_mm_ss");
-//        String file_name=sdf.format(date)+".jpg";
-//        File CacheFile=new File(CacheDir,file_name);
-//        try{
-//            FileOutputStream fos=new FileOutputStream(CacheFile);
-//            boolean issuccessful=bitmap.compress(CompressFormat.JPEG,100,fos);
-//            show(issuccessful);
-//        }catch (FileNotFoundException e){
-//            e.printStackTrace();
-//            show(false);
-//        }
-//    }
-//    private void show(boolean issuccessful) {
-//        toast = Toast.makeText(DoodleActivity.this, issuccessful ? "save_successful" : "save_fail", 0);
-//        if (!toast.getView().isShown()) {
-//            toast.show();
-//        }
-//    }
-//
-//}
-
-
 package net.micode.notes.doodle;
 
 import android.app.Activity;
@@ -151,6 +19,7 @@ import android.os.Environment;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -159,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import net.micode.notes.R;
+import net.micode.notes.ui.NoteEditActivity;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -177,6 +47,7 @@ public class DoodleActivity extends Activity {
     int xx, yy, yyyy, xxxx;
     int startX;
     int startY;
+    public String savedPath = null;
 
     private String[] wideList = {"5", "10", "15", "20", "25", "30"};//单选列表
     private String[] colorList = {"红", "黄", "绿", "蓝", "青", "灰", "黑"};//单选列表
@@ -190,6 +61,19 @@ public class DoodleActivity extends Activity {
 
         //触摸方法
         touch();
+    }
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        if(keyCode == KeyEvent.KEYCODE_HOME){
+            return true;
+        }else if(keyCode == KeyEvent.KEYCODE_BACK){
+            Intent intent=new Intent();
+            //Log.i("doodle","============="+savedPath);
+            intent.putExtra("doodlepath",savedPath);
+            setResult(RESULT_OK,intent);
+            finish();
+            return true;
+        }
+        return super.onKeyDown(keyCode,event);
     }
 
     //触摸方法
@@ -262,6 +146,7 @@ public class DoodleActivity extends Activity {
         switch (view.getId()) {
             case R.id.btSave:
                 save();  //保存
+                //Log.i("doodle","============"+savedPath);
                 break;
             case R.id.btClean:
                 canvas.drawColor(Color.WHITE);
@@ -343,7 +228,7 @@ public class DoodleActivity extends Activity {
         dialog.show();//显示对话框  
     }
 
-    private void save() {
+    public String save() {
         /*******************保存图片****************/
         String newPath = getExternalFilesDir(null) + "/" + System.currentTimeMillis()+ ".jpg";
         Log.i(TAG,"directory_pictures="+newPath);
@@ -371,6 +256,8 @@ public class DoodleActivity extends Activity {
         Log.i(TAG,"扫描完成"+newPath);
         Toast.makeText(this, "扫描完成", Toast.LENGTH_LONG).show();
 
+        savedPath = newPath;
+        return savedPath;  //存储涂鸦路径
     }
 
 }

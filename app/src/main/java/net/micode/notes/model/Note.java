@@ -41,7 +41,7 @@ public class Note {
     /**
      * Create a new note id for adding a new note to databases
      */
-    public static synchronized long getNewNoteId(Context context, long folderId) {
+    public static synchronized long getNewNoteId(Context context, long folderId){
         // Create a new note in the database
         ContentValues values = new ContentValues();
         long createdTime = System.currentTimeMillis();
@@ -50,7 +50,7 @@ public class Note {
         values.put(NoteColumns.TYPE, Notes.TYPE_NOTE);
         values.put(NoteColumns.LOCAL_MODIFIED, 1);
         values.put(NoteColumns.PARENT_ID, folderId);
-        Uri uri = context.getContentResolver().insert(Notes.CONTENT_NOTE_URI, values);
+        Uri uri = context.getContentResolver().insert(Notes.CONTENT_NOTE_URI,values);
 
         long noteId = 0;
         try {
@@ -79,6 +79,9 @@ public class Note {
     public void setTextData(String key, String value) {
         mNoteData.setTextData(key, value);
     }
+    public void setDoodlePath(String key, String value) {
+        mNoteData.setDoodlePath(key, value);
+    }
 
     public void setTextDataId(long id) {
         mNoteData.setTextDataId(id);
@@ -86,6 +89,10 @@ public class Note {
 
     public long getTextDataId() {
         return mNoteData.mTextDataId;
+    }
+
+    public void setDoodleDataId(long id) {
+        mNoteData.setDoodleDataId(id);
     }
 
     public void setCallDataId(long id) {
@@ -130,6 +137,7 @@ public class Note {
         return true;
     }
 
+
     private class NoteData {
         private long mTextDataId;
 
@@ -139,17 +147,24 @@ public class Note {
 
         private ContentValues mCallDataValues;
 
+        private long mDoodleDataId;//对应dataID
+
+        private ContentValues mDoodlePathValues; //存储ID和路径
+
         private static final String TAG = "NoteData";
 
         public NoteData() {
             mTextDataValues = new ContentValues();
             mCallDataValues = new ContentValues();
+            mDoodlePathValues = new ContentValues(); //doodle
             mTextDataId = 0;
             mCallDataId = 0;
+            mDoodleDataId = 0;
         }
 
         boolean isLocalModified() {
-            return mTextDataValues.size() > 0 || mCallDataValues.size() > 0;
+            Log.i("doodle", "====="+mDoodlePathValues.size());
+            return mTextDataValues.size() > 0 || mCallDataValues.size() > 0 || mDoodlePathValues.size()>0; //增加了mDoodlePath的判断
         }
 
         void setTextDataId(long id) {
@@ -157,6 +172,12 @@ public class Note {
                 throw new IllegalArgumentException("Text data id should larger than 0");
             }
             mTextDataId = id;
+        }
+        void setDoodleDataId(long id){
+            if(id <= 0) {
+                throw new IllegalArgumentException("Text data id should larger than 0");
+            }
+            mDoodleDataId = id;
         }
 
         void setCallDataId(long id) {
@@ -174,6 +195,14 @@ public class Note {
 
         void setTextData(String key, String value) {
             mTextDataValues.put(key, value);
+            mNoteDiffValues.put(NoteColumns.LOCAL_MODIFIED, 1);
+            mNoteDiffValues.put(NoteColumns.MODIFIED_DATE, System.currentTimeMillis());
+        }
+        /**
+         * 设置涂鸦路径
+         * */
+        void setDoodlePath(String key,String value){
+            mDoodlePathValues.put(key, value);
             mNoteDiffValues.put(NoteColumns.LOCAL_MODIFIED, 1);
             mNoteDiffValues.put(NoteColumns.MODIFIED_DATE, System.currentTimeMillis());
         }
@@ -211,6 +240,28 @@ public class Note {
                 mTextDataValues.clear();
             }
 
+            if(mDoodlePathValues.size() > 0) {
+                mDoodlePathValues.put(DataColumns.NOTE_ID, noteId);
+                if (mDoodleDataId == 0) {
+                    mDoodlePathValues.put(DataColumns.MIME_TYPE, TextNote.CONTENT_ITEM_TYPE);
+                    Uri uri = context.getContentResolver().insert(Notes.CONTENT_DATA_URI,
+                            mDoodlePathValues);
+                    try {
+                        setDoodleDataId(Long.valueOf(uri.getPathSegments().get(1)));
+                    } catch (NumberFormatException e) {
+                        Log.e(TAG, "Insert new text data fail with noteId" + noteId);
+                        mDoodlePathValues.clear();
+                        return null;
+                    }
+                } else {
+                    builder = ContentProviderOperation.newUpdate(ContentUris.withAppendedId(
+                            Notes.CONTENT_DATA_URI, mDoodleDataId));
+                    builder.withValues(mDoodlePathValues);
+                    operationList.add(builder.build());
+                }
+                mDoodlePathValues.clear();
+            }
+
             if(mCallDataValues.size() > 0) {
                 mCallDataValues.put(DataColumns.NOTE_ID, noteId);
                 if (mCallDataId == 0) {
@@ -233,6 +284,9 @@ public class Note {
                 mCallDataValues.clear();
             }
 
+            /**
+             * 批量操作数据库
+             * */
             if (operationList.size() > 0) {
                 try {
                     ContentProviderResult[] results = context.getContentResolver().applyBatch(
@@ -247,6 +301,7 @@ public class Note {
                     return null;
                 }
             }
+
             return null;
         }
     }

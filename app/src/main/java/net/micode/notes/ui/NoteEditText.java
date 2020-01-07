@@ -37,6 +37,8 @@ import net.micode.notes.R;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/*****************在edittext 文本编辑框上扩展***********/
 public class NoteEditText extends EditText {
     private static final String TAG = "NoteEditText";
     private int mIndex;

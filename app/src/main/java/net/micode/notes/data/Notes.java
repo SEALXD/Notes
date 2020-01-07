@@ -18,9 +18,6 @@ package net.micode.notes.data;
 
 import android.net.Uri;
 
-/**
- *
- */
 public class Notes {
     public static final String AUTHORITY = "micode_notes";
     public static final String TAG = "Notes";
@@ -208,7 +205,6 @@ public class Notes {
          */
         public static final String CONTENT = "content";
 
-
         /**
          * Generic data column, the meaning is {@link #MIMETYPE} specific, used for
          * integer data type
@@ -243,6 +239,10 @@ public class Notes {
          * <P> Type: TEXT </P>
          */
         public static final String DATA5 = "data5";
+
+        /****************存储涂鸦路径*************/
+
+        public static final String DOODLEPATH = "doodlepath";
     }
 
     public static final class TextNote implements DataColumns {
