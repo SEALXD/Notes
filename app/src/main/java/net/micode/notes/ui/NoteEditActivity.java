@@ -173,6 +173,8 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         paintButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //先保存之前编辑的文字
+                saveNote();
                 /*
                 第一个参数:上下文对象this
                 第二个参数:目标文件
@@ -513,6 +515,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         if(clearSettingState()) {
             return;
         }
+        Log.i("doodle","触发NoteEditActivity");
         saveNote();
         super.onBackPressed();
     }

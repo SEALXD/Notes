@@ -48,6 +48,7 @@ drawable bg_btn_set_color
 drawable bg_color_btn_mask
 drawable call_record
 drawable clock
+drawable daochu_3
 drawable delete
 drawable dropdown_icon
 drawable edit_blue
@@ -102,6 +103,7 @@ drawable note_edit_color_selector_panel
 drawable notification
 drawable search_result
 drawable selected
+drawable shezhi
 drawable test
 drawable title_alert
 drawable title_bar_bg
@@ -115,6 +117,7 @@ drawable widget_4x_green
 drawable widget_4x_red
 drawable widget_4x_white
 drawable widget_4x_yellow
+drawable xinjianwenjianjia
 id account_dialog_subtitle
 id account_dialog_title
 id action_a

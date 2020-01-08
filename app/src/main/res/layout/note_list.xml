@@ -58,42 +58,47 @@
         android:focusable="false"
         android:layout_gravity="bottom" />
 
-    <net.micode.notes.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/multiple_actions"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_gravity="right"
-        fab:fab_addButtonColorNormal="@color/white"
-        fab:fab_addButtonColorPressed="@color/white_pressed"
-        fab:fab_addButtonPlusIconColor="@color/half_black"
-        fab:fab_labelStyle="@style/menu_labels_style"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp">
-
-        <net.micode.notes.floatingactionbutton.FloatingActionButton
-            android:id="@+id/action_a"
+        android:layout_marginTop="180dp">
+        <net.micode.notes.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/multiple_actions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_title="按钮一"
-            fab:fab_colorPressed="@color/white_pressed"/>
+            fab:fab_addButtonColorNormal="@color/white"
+            fab:fab_addButtonColorPressed="@color/white_pressed"
+            fab:fab_addButtonPlusIconColor="@color/half_black"
+            fab:fab_labelStyle="@style/menu_labels_style"
 
-        <net.micode.notes.floatingactionbutton.FloatingActionButton
-            android:id="@+id/action_b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_title="按钮二"
-            fab:fab_colorPressed="@color/white_pressed"/>
+           >
 
-        <net.micode.notes.floatingactionbutton.FloatingActionButton
-            android:id="@+id/action_c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_colorNormal="@color/white"
-            fab:fab_title="按钮三"
-            fab:fab_colorPressed="@color/white_pressed"/>
+            <net.micode.notes.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_icon="@drawable/xinjianwenjianjia"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"/>
 
-    </net.micode.notes.floatingactionbutton.FloatingActionsMenu>
+            <net.micode.notes.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_icon="@drawable/daochu_3"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"/>
+
+            <net.micode.notes.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_icon="@drawable/shezhi"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_colorPressed="@color/white_pressed"/>
+
+        </net.micode.notes.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
 </FrameLayout>

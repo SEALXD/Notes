@@ -2,6 +2,7 @@ package net.micode.notes.doodle;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -229,8 +231,9 @@ public class DoodleActivity extends Activity {
     }
 
     public String save() {
-        /*******************保存图片****************/
-        String newPath = getExternalFilesDir(null) + "/" + System.currentTimeMillis()+ ".jpg";
+        /*******************保存图片到系统文件夹****************/
+        String picName = System.currentTimeMillis()+ ".jpg";
+        String newPath = getExternalFilesDir(null) + "/" + picName;
         Log.i(TAG,"directory_pictures="+newPath);
         FileOutputStream fileOutputStream = null;
         try {
@@ -238,7 +241,7 @@ public class DoodleActivity extends Activity {
             baseBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
             fileOutputStream.flush();
             fileOutputStream.close();
-            Toast.makeText(this, "保存图片成功", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "保存图片成功", Toast.LENGTH_LONG).show();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             Toast.makeText(this, "保存图片失败", Toast.LENGTH_LONG).show();
@@ -247,6 +250,43 @@ public class DoodleActivity extends Activity {
             Toast.makeText(this, "保存图片失败", Toast.LENGTH_LONG).show();
         }
 
+        /****************保存图片到相册*****************/
+        String galleryPath= Environment.getExternalStorageDirectory()
+                + File.separator + Environment.DIRECTORY_DCIM
+                +File.separator+"Camera"+File.separator;
+        // 声明文件对象
+        File file = null;
+        // 声明输出流
+        FileOutputStream outStream = null;
+        try {
+            // 如果有目标文件，直接获得文件对象，否则创建一个以filename为名称的文件
+            file = new File(galleryPath, picName+ ".jpg");
+
+            // 获得文件相对路径
+            String fileName = file.toString();
+            // 获得输出流，如果文件中有内容，追加内容
+            outStream = new FileOutputStream(fileName);
+            if (null != outStream) {
+                baseBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outStream);
+            }
+
+        } catch (Exception e) {
+            e.getStackTrace();
+        }finally {
+            try {
+                if (outStream != null) {
+                    outStream.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        //通知相册更新
+        MediaStore.Images.Media.insertImage(this.getContentResolver(), baseBitmap, file.getAbsolutePath(), null);
+        Toast.makeText(this, "保存成功", Toast.LENGTH_LONG).show();
+
+
         /********保存成功后如果不扫描SD卡，保存的文件不会显示********/
         //  Intent intent = new Intent(Intent.ACTION_MEDIA_MOUNTED); //这是刷新SD卡
         Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);  // 这是刷新单个文件
@@ -254,7 +294,7 @@ public class DoodleActivity extends Activity {
         intent.setData(uri);
         sendBroadcast(intent);
         Log.i(TAG,"扫描完成"+newPath);
-        Toast.makeText(this, "扫描完成", Toast.LENGTH_LONG).show();
+       // Toast.makeText(this, "扫描完成", Toast.LENGTH_LONG).show();
 
         savedPath = newPath;
         return savedPath;  //存储涂鸦路径

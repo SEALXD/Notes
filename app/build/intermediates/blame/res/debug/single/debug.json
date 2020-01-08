@@ -48,16 +48,16 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\call_record.png"
     },
     {
-        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_note_edit.xml.flat",
-        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_edit.xml"
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_list_green_up.9.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\list_green_up.9.png"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_sub_folder.xml.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\sub_folder.xml"
     },
     {
-        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_list_green_up.9.png.flat",
-        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\list_green_up.9.png"
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_note_edit.xml.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_edit.xml"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_widget_2x_blue.png.flat",
@@ -104,6 +104,10 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\list_red_middle.9.png"
     },
     {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_daochu_3.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable\\daochu_3.png"
+    },
+    {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_font_size_selector_bg.9.png.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\font_size_selector_bg.9.png"
     },
@@ -128,6 +132,10 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\note_edit_color_selector_panel.png"
     },
     {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shezhi.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable\\shezhi.png"
+    },
+    {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_new_note.xml.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable\\new_note.xml"
     },
@@ -144,6 +152,10 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\widget_2x_yellow.png"
     },
     {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_xinjianwenjianjia.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\xinjianwenjianjia.png"
+    },
+    {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_edit_title_green.9.png.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\edit_title_green.9.png"
     },
@@ -158,6 +170,10 @@
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\layout_folder_list_item.xml.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\layout\\folder_list_item.xml"
+    },
+    {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable_xinjianwenjianjia.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable\\xinjianwenjianjia.png"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\xml_widget_4x_info.xml.flat",
@@ -260,6 +276,10 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_list.xml"
     },
     {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_shezhi.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\shezhi.png"
+    },
+    {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_edit.xml.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\layout\\note_edit.xml"
     },
@@ -350,6 +370,10 @@
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_note_list_dropdown.xml.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_list_dropdown.xml"
+    },
+    {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_daochu_3.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\daochu_3.png"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_list_blue_up.9.png.flat",

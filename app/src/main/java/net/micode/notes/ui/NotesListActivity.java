@@ -247,7 +247,8 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         actionA.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionA.setTitle("按钮一被单击");
+                showCreateOrModifyFolderDialog(true);
+                //actionA.setTitle("按钮一被单击");
             }
         });
 
@@ -255,8 +256,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         actionB.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionB.setTitle("按钮二被单击,切换背景图");
-                actionB.setBackground(getResources().getDrawable(R.drawable.ic_launcher));
+                exportNoteToText();
+                //actionB.setTitle("按钮二被单击,切换背景图");
+                //actionB.setBackground(getResources().getDrawable(R.drawable.ic_launcher));
             }
         });
 
@@ -264,7 +266,8 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         actionC.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionC.setTitle("按钮三被单击");
+                startPreferenceActivity();
+                // actionC.setTitle("按钮三被单击");
             }
         });
     }
@@ -349,6 +352,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             updateMenu();
         }
 
+        /**
+         * 转移文件夹和删除
+         * */
         public boolean onMenuItemClick(MenuItem item) {
             if (mNotesListAdapter.getSelectedCount() == 0) {
                 Toast.makeText(NotesListActivity.this, getString(R.string.menu_select_none),
@@ -800,6 +806,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         return true;
     }
 
+    /**
+     * 准备菜单栏里的内容
+     * */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.clear();
@@ -818,6 +827,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         return true;
     }
 
+    /***
+     *菜单项
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

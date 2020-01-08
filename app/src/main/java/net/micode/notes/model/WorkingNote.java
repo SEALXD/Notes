@@ -172,6 +172,7 @@ public class WorkingNote {
                     if (DataConstants.NOTE.equals(type)) {
                         mContent = cursor.getString(DATA_CONTENT_COLUMN);
                         mDoodlePath = cursor.getString(DATA_DOODLEPATH_COLUMN);//获取存储的DOODLEPATH
+                        Log.i("doodle","加载已存储的路径"+mDoodlePath);
                         mMode = cursor.getInt(DATA_MODE_COLUMN);
                         mNote.setTextDataId(cursor.getLong(DATA_ID_COLUMN));
                         mNote.setDoodleDataId(cursor.getLong(DATA_ID_COLUMN));//将doodleid与dataID对应
@@ -203,14 +204,16 @@ public class WorkingNote {
     }
 
     public synchronized boolean saveNote() {
+        Log.i("doodle","进入saveNote");
         if (isWorthSaving()) {
+            Log.i("doodle","触发存储WN worthSaving");
             if (!existInDatabase()) {
                 if ((mNoteId = Note.getNewNoteId(mContext, mFolderId)) == 0) {
                     Log.e(TAG, "Create new note fail with id:" + mNoteId);
                     return false;
                 }
             }
-
+            Log.i("doodle","触发存储in Working note saveNote");
             mNote.syncNote(mContext, mNoteId);
 
             /**
@@ -232,10 +235,10 @@ public class WorkingNote {
     }
 
     /**
-     * 判断是否需要保存   图片这个如何判断？
+     * 判断是否需要保存   图片为空
      * */
     private boolean isWorthSaving() {
-        if (mIsDeleted || (!existInDatabase() && TextUtils.isEmpty(mContent))
+        if (mIsDeleted || (!existInDatabase() && TextUtils.isEmpty(mContent)&& mDoodlePath==null)
                 || (existInDatabase() && !mNote.isLocalModified())) {
             return false;
         } else {
