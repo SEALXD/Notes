@@ -12,316 +12,748 @@ public final class R {
     public static final int format_for_exported_note=0x7f010000;
     public static final int menu_share_ways=0x7f010001;
   }
+  public static final class attr {
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int fab_addButtonColorNormal=0x7f020000;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int fab_addButtonColorPressed=0x7f020001;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int fab_addButtonPlusIconColor=0x7f020002;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>mini</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int fab_addButtonSize=0x7f020003;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int fab_addButtonStrokeVisible=0x7f020004;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int fab_colorDisabled=0x7f020005;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int fab_colorNormal=0x7f020006;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int fab_colorPressed=0x7f020007;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>down</td><td>1</td><td></td></tr>
+     * <tr><td>left</td><td>2</td><td></td></tr>
+     * <tr><td>right</td><td>3</td><td></td></tr>
+     * <tr><td>up</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int fab_expandDirection=0x7f020008;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int fab_icon=0x7f020009;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int fab_labelStyle=0x7f02000a;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>left</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int fab_labelsPosition=0x7f02000b;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int fab_plusIconColor=0x7f02000c;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>mini</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int fab_size=0x7f02000d;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int fab_stroke_visible=0x7f02000e;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int fab_title=0x7f02000f;
+  }
   public static final class color {
-    public static final int primary_text_dark=0x7f020000;
-    public static final int secondary_text_dark=0x7f020001;
-    public static final int user_query_highlight=0x7f020002;
+    public static final int background=0x7f030000;
+    public static final int black_semi_transparent=0x7f030001;
+    public static final int blue_semi_transparent=0x7f030002;
+    public static final int blue_semi_transparent_pressed=0x7f030003;
+    public static final int half_black=0x7f030004;
+    public static final int pink=0x7f030005;
+    public static final int pink_pressed=0x7f030006;
+    public static final int primary_text_dark=0x7f030007;
+    public static final int secondary_text_dark=0x7f030008;
+    public static final int user_query_highlight=0x7f030009;
+    public static final int white=0x7f03000a;
+    public static final int white_pressed=0x7f03000b;
   }
   public static final class dimen {
-    public static final int text_font_size_large=0x7f030000;
-    public static final int text_font_size_medium=0x7f030001;
-    public static final int text_font_size_normal=0x7f030002;
-    public static final int text_font_size_small=0x7f030003;
-    public static final int text_font_size_super=0x7f030004;
+    public static final int fab_actions_spacing=0x7f040000;
+    public static final int fab_icon_size=0x7f040001;
+    public static final int fab_labels_margin=0x7f040002;
+    public static final int fab_plus_icon_size=0x7f040003;
+    public static final int fab_plus_icon_stroke=0x7f040004;
+    public static final int fab_shadow_offset=0x7f040005;
+    public static final int fab_shadow_radius=0x7f040006;
+    public static final int fab_size_mini=0x7f040007;
+    public static final int fab_size_normal=0x7f040008;
+    public static final int fab_stroke_width=0x7f040009;
+    public static final int text_font_size_large=0x7f04000a;
+    public static final int text_font_size_medium=0x7f04000b;
+    public static final int text_font_size_normal=0x7f04000c;
+    public static final int text_font_size_small=0x7f04000d;
+    public static final int text_font_size_super=0x7f04000e;
   }
   public static final class drawable {
-    public static final int bg_btn_set_color=0x7f040000;
-    public static final int bg_color_btn_mask=0x7f040001;
-    public static final int call_record=0x7f040002;
-    public static final int clock=0x7f040003;
-    public static final int delete=0x7f040004;
-    public static final int dropdown_icon=0x7f040005;
-    public static final int edit_blue=0x7f040006;
-    public static final int edit_green=0x7f040007;
-    public static final int edit_red=0x7f040008;
-    public static final int edit_title_blue=0x7f040009;
-    public static final int edit_title_green=0x7f04000a;
-    public static final int edit_title_red=0x7f04000b;
-    public static final int edit_title_white=0x7f04000c;
-    public static final int edit_title_yellow=0x7f04000d;
-    public static final int edit_white=0x7f04000e;
-    public static final int edit_yellow=0x7f04000f;
-    public static final int font_large=0x7f040010;
-    public static final int font_normal=0x7f040011;
-    public static final int font_size_selector_bg=0x7f040012;
-    public static final int font_small=0x7f040013;
-    public static final int font_super=0x7f040014;
-    public static final int icon_app=0x7f040015;
-    public static final int list_background=0x7f040016;
-    public static final int list_blue_down=0x7f040017;
-    public static final int list_blue_middle=0x7f040018;
-    public static final int list_blue_single=0x7f040019;
-    public static final int list_blue_up=0x7f04001a;
-    public static final int list_folder=0x7f04001b;
-    public static final int list_footer_bg=0x7f04001c;
-    public static final int list_green_down=0x7f04001d;
-    public static final int list_green_middle=0x7f04001e;
-    public static final int list_green_single=0x7f04001f;
-    public static final int list_green_up=0x7f040020;
-    public static final int list_red_down=0x7f040021;
-    public static final int list_red_middle=0x7f040022;
-    public static final int list_red_single=0x7f040023;
-    public static final int list_red_up=0x7f040024;
-    public static final int list_white_down=0x7f040025;
-    public static final int list_white_middle=0x7f040026;
-    public static final int list_white_single=0x7f040027;
-    public static final int list_white_up=0x7f040028;
-    public static final int list_yellow_down=0x7f040029;
-    public static final int list_yellow_middle=0x7f04002a;
-    public static final int list_yellow_single=0x7f04002b;
-    public static final int list_yellow_up=0x7f04002c;
-    public static final int menu_delete=0x7f04002d;
-    public static final int menu_move=0x7f04002e;
-    public static final int new_note=0x7f04002f;
-    public static final int new_note_normal=0x7f040030;
-    public static final int new_note_pressed=0x7f040031;
-    public static final int note_edit_color_selector_panel=0x7f040032;
-    public static final int notification=0x7f040033;
-    public static final int search_result=0x7f040034;
-    public static final int selected=0x7f040035;
-    public static final int test=0x7f040036;
-    public static final int title_alert=0x7f040037;
-    public static final int title_bar_bg=0x7f040038;
-    public static final int widget_2x_blue=0x7f040039;
-    public static final int widget_2x_green=0x7f04003a;
-    public static final int widget_2x_red=0x7f04003b;
-    public static final int widget_2x_white=0x7f04003c;
-    public static final int widget_2x_yellow=0x7f04003d;
-    public static final int widget_4x_blue=0x7f04003e;
-    public static final int widget_4x_green=0x7f04003f;
-    public static final int widget_4x_red=0x7f040040;
-    public static final int widget_4x_white=0x7f040041;
-    public static final int widget_4x_yellow=0x7f040042;
+    public static final int bg_btn_set_color=0x7f050000;
+    public static final int bg_color_btn_mask=0x7f050001;
+    public static final int call_record=0x7f050002;
+    public static final int clock=0x7f050003;
+    public static final int delete=0x7f050004;
+    public static final int dropdown_icon=0x7f050005;
+    public static final int edit_blue=0x7f050006;
+    public static final int edit_green=0x7f050007;
+    public static final int edit_red=0x7f050008;
+    public static final int edit_title_blue=0x7f050009;
+    public static final int edit_title_green=0x7f05000a;
+    public static final int edit_title_red=0x7f05000b;
+    public static final int edit_title_white=0x7f05000c;
+    public static final int edit_title_yellow=0x7f05000d;
+    public static final int edit_white=0x7f05000e;
+    public static final int edit_yellow=0x7f05000f;
+    public static final int fab_bg_mini=0x7f050010;
+    public static final int fab_bg_normal=0x7f050011;
+    public static final int fab_label_background=0x7f050012;
+    public static final int font_large=0x7f050013;
+    public static final int font_normal=0x7f050014;
+    public static final int font_size_selector_bg=0x7f050015;
+    public static final int font_small=0x7f050016;
+    public static final int font_super=0x7f050017;
+    public static final int ic_launcher=0x7f050018;
+    public static final int icon_app=0x7f050019;
+    public static final int list_background=0x7f05001a;
+    public static final int list_blue_down=0x7f05001b;
+    public static final int list_blue_middle=0x7f05001c;
+    public static final int list_blue_single=0x7f05001d;
+    public static final int list_blue_up=0x7f05001e;
+    public static final int list_folder=0x7f05001f;
+    public static final int list_footer_bg=0x7f050020;
+    public static final int list_green_down=0x7f050021;
+    public static final int list_green_middle=0x7f050022;
+    public static final int list_green_single=0x7f050023;
+    public static final int list_green_up=0x7f050024;
+    public static final int list_red_down=0x7f050025;
+    public static final int list_red_middle=0x7f050026;
+    public static final int list_red_single=0x7f050027;
+    public static final int list_red_up=0x7f050028;
+    public static final int list_white_down=0x7f050029;
+    public static final int list_white_middle=0x7f05002a;
+    public static final int list_white_single=0x7f05002b;
+    public static final int list_white_up=0x7f05002c;
+    public static final int list_yellow_down=0x7f05002d;
+    public static final int list_yellow_middle=0x7f05002e;
+    public static final int list_yellow_single=0x7f05002f;
+    public static final int list_yellow_up=0x7f050030;
+    public static final int menu_delete=0x7f050031;
+    public static final int menu_move=0x7f050032;
+    public static final int new_note=0x7f050033;
+    public static final int new_note_normal=0x7f050034;
+    public static final int new_note_pressed=0x7f050035;
+    public static final int note_edit_color_selector_panel=0x7f050036;
+    public static final int notification=0x7f050037;
+    public static final int search_result=0x7f050038;
+    public static final int selected=0x7f050039;
+    public static final int test=0x7f05003a;
+    public static final int title_alert=0x7f05003b;
+    public static final int title_bar_bg=0x7f05003c;
+    public static final int widget_2x_blue=0x7f05003d;
+    public static final int widget_2x_green=0x7f05003e;
+    public static final int widget_2x_red=0x7f05003f;
+    public static final int widget_2x_white=0x7f050040;
+    public static final int widget_2x_yellow=0x7f050041;
+    public static final int widget_4x_blue=0x7f050042;
+    public static final int widget_4x_green=0x7f050043;
+    public static final int widget_4x_red=0x7f050044;
+    public static final int widget_4x_white=0x7f050045;
+    public static final int widget_4x_yellow=0x7f050046;
   }
   public static final class id {
-    public static final int account_dialog_subtitle=0x7f050000;
-    public static final int account_dialog_title=0x7f050001;
-    public static final int action_select_all=0x7f050002;
-    public static final int amPm=0x7f050003;
-    public static final int btChangeColor=0x7f050004;
-    public static final int btChangeWide=0x7f050005;
-    public static final int btClean=0x7f050006;
-    public static final int btSave=0x7f050007;
-    public static final int btn_new_note=0x7f050008;
-    public static final int btn_set_bg_color=0x7f050009;
-    public static final int cb_edit_item=0x7f05000a;
-    public static final int date=0x7f05000b;
-    public static final int delete=0x7f05000c;
-    public static final int doodle_pic=0x7f05000d;
-    public static final int et_edit_text=0x7f05000e;
-    public static final int et_foler_name=0x7f05000f;
-    public static final int font_size_selector=0x7f050010;
-    public static final int hour=0x7f050011;
-    public static final int iv=0x7f050012;
-    public static final int iv_alert_icon=0x7f050013;
-    public static final int iv_bg_blue=0x7f050014;
-    public static final int iv_bg_blue_select=0x7f050015;
-    public static final int iv_bg_green=0x7f050016;
-    public static final int iv_bg_green_select=0x7f050017;
-    public static final int iv_bg_red=0x7f050018;
-    public static final int iv_bg_red_select=0x7f050019;
-    public static final int iv_bg_white=0x7f05001a;
-    public static final int iv_bg_white_select=0x7f05001b;
-    public static final int iv_bg_yellow=0x7f05001c;
-    public static final int iv_bg_yellow_select=0x7f05001d;
-    public static final int iv_large_select=0x7f05001e;
-    public static final int iv_medium_select=0x7f05001f;
-    public static final int iv_small_select=0x7f050020;
-    public static final int iv_super_select=0x7f050021;
-    public static final int ll_font_large=0x7f050022;
-    public static final int ll_font_normal=0x7f050023;
-    public static final int ll_font_small=0x7f050024;
-    public static final int ll_font_super=0x7f050025;
-    public static final int menu_alert=0x7f050026;
-    public static final int menu_delete=0x7f050027;
-    public static final int menu_delete_remind=0x7f050028;
-    public static final int menu_export_text=0x7f050029;
-    public static final int menu_font_size=0x7f05002a;
-    public static final int menu_list_mode=0x7f05002b;
-    public static final int menu_new_folder=0x7f05002c;
-    public static final int menu_new_note=0x7f05002d;
-    public static final int menu_search=0x7f05002e;
-    public static final int menu_send_to_desktop=0x7f05002f;
-    public static final int menu_setting=0x7f050030;
-    public static final int menu_share=0x7f050031;
-    public static final int menu_sync=0x7f050032;
-    public static final int minute=0x7f050033;
-    public static final int move=0x7f050034;
-    public static final int navigation_bar=0x7f050035;
-    public static final int note_bg_color_selector=0x7f050036;
-    public static final int note_edit_list=0x7f050037;
-    public static final int note_edit_view=0x7f050038;
-    public static final int note_item=0x7f050039;
-    public static final int note_title=0x7f05003a;
-    public static final int notes_list=0x7f05003b;
-    public static final int paint_button=0x7f05003c;
-    public static final int prefenerece_sync_status_textview=0x7f05003d;
-    public static final int preference_sync_button=0x7f05003e;
-    public static final int selection_menu=0x7f05003f;
-    public static final int sv_note_edit=0x7f050040;
-    public static final int tv_alert_date=0x7f050041;
-    public static final int tv_folder_name=0x7f050042;
-    public static final int tv_modified_date=0x7f050043;
-    public static final int tv_name=0x7f050044;
-    public static final int tv_time=0x7f050045;
-    public static final int tv_title=0x7f050046;
-    public static final int tv_title_bar=0x7f050047;
-    public static final int widget_bg_image=0x7f050048;
-    public static final int widget_text=0x7f050049;
+    public static final int account_dialog_subtitle=0x7f060000;
+    public static final int account_dialog_title=0x7f060001;
+    public static final int action_a=0x7f060002;
+    public static final int action_b=0x7f060003;
+    public static final int action_c=0x7f060004;
+    public static final int action_select_all=0x7f060005;
+    public static final int amPm=0x7f060006;
+    public static final int btChangeColor=0x7f060007;
+    public static final int btChangeWide=0x7f060008;
+    public static final int btClean=0x7f060009;
+    public static final int btSave=0x7f06000a;
+    public static final int btn_new_note=0x7f06000b;
+    public static final int btn_set_bg_color=0x7f06000c;
+    public static final int cb_edit_item=0x7f06000d;
+    public static final int date=0x7f06000e;
+    public static final int delete=0x7f06000f;
+    public static final int doodle_pic=0x7f060010;
+    public static final int down=0x7f060011;
+    public static final int et_edit_text=0x7f060012;
+    public static final int et_foler_name=0x7f060013;
+    public static final int fab_expand_menu_button=0x7f060014;
+    public static final int fab_label=0x7f060015;
+    public static final int font_size_selector=0x7f060016;
+    public static final int hour=0x7f060017;
+    public static final int iv=0x7f060018;
+    public static final int iv_alert_icon=0x7f060019;
+    public static final int iv_bg_blue=0x7f06001a;
+    public static final int iv_bg_blue_select=0x7f06001b;
+    public static final int iv_bg_green=0x7f06001c;
+    public static final int iv_bg_green_select=0x7f06001d;
+    public static final int iv_bg_red=0x7f06001e;
+    public static final int iv_bg_red_select=0x7f06001f;
+    public static final int iv_bg_white=0x7f060020;
+    public static final int iv_bg_white_select=0x7f060021;
+    public static final int iv_bg_yellow=0x7f060022;
+    public static final int iv_bg_yellow_select=0x7f060023;
+    public static final int iv_large_select=0x7f060024;
+    public static final int iv_medium_select=0x7f060025;
+    public static final int iv_small_select=0x7f060026;
+    public static final int iv_super_select=0x7f060027;
+    public static final int left=0x7f060028;
+    public static final int ll_font_large=0x7f060029;
+    public static final int ll_font_normal=0x7f06002a;
+    public static final int ll_font_small=0x7f06002b;
+    public static final int ll_font_super=0x7f06002c;
+    public static final int menu_alert=0x7f06002d;
+    public static final int menu_delete=0x7f06002e;
+    public static final int menu_delete_remind=0x7f06002f;
+    public static final int menu_export_text=0x7f060030;
+    public static final int menu_font_size=0x7f060031;
+    public static final int menu_list_mode=0x7f060032;
+    public static final int menu_new_folder=0x7f060033;
+    public static final int menu_new_note=0x7f060034;
+    public static final int menu_search=0x7f060035;
+    public static final int menu_send_to_desktop=0x7f060036;
+    public static final int menu_setting=0x7f060037;
+    public static final int menu_share=0x7f060038;
+    public static final int menu_sync=0x7f060039;
+    public static final int mini=0x7f06003a;
+    public static final int minute=0x7f06003b;
+    public static final int move=0x7f06003c;
+    public static final int multiple_actions=0x7f06003d;
+    public static final int navigation_bar=0x7f06003e;
+    public static final int normal=0x7f06003f;
+    public static final int note_bg_color_selector=0x7f060040;
+    public static final int note_edit_list=0x7f060041;
+    public static final int note_edit_view=0x7f060042;
+    public static final int note_item=0x7f060043;
+    public static final int note_title=0x7f060044;
+    public static final int notes_list=0x7f060045;
+    public static final int paint_button=0x7f060046;
+    public static final int prefenerece_sync_status_textview=0x7f060047;
+    public static final int preference_sync_button=0x7f060048;
+    public static final int right=0x7f060049;
+    public static final int selection_menu=0x7f06004a;
+    public static final int sv_note_edit=0x7f06004b;
+    public static final int tv_alert_date=0x7f06004c;
+    public static final int tv_folder_name=0x7f06004d;
+    public static final int tv_modified_date=0x7f06004e;
+    public static final int tv_name=0x7f06004f;
+    public static final int tv_time=0x7f060050;
+    public static final int tv_title=0x7f060051;
+    public static final int tv_title_bar=0x7f060052;
+    public static final int up=0x7f060053;
+    public static final int widget_bg_image=0x7f060054;
+    public static final int widget_text=0x7f060055;
   }
   public static final class layout {
-    public static final int account_dialog_title=0x7f060000;
-    public static final int add_account_text=0x7f060001;
-    public static final int datetime_picker=0x7f060002;
-    public static final int dialog_edit_text=0x7f060003;
-    public static final int doodle=0x7f060004;
-    public static final int folder_list_item=0x7f060005;
-    public static final int note_edit=0x7f060006;
-    public static final int note_edit_list_item=0x7f060007;
-    public static final int note_item=0x7f060008;
-    public static final int note_list=0x7f060009;
-    public static final int note_list_dropdown_menu=0x7f06000a;
-    public static final int note_list_footer=0x7f06000b;
-    public static final int settings_header=0x7f06000c;
-    public static final int widget_2x=0x7f06000d;
-    public static final int widget_4x=0x7f06000e;
+    public static final int account_dialog_title=0x7f070000;
+    public static final int add_account_text=0x7f070001;
+    public static final int datetime_picker=0x7f070002;
+    public static final int dialog_edit_text=0x7f070003;
+    public static final int doodle=0x7f070004;
+    public static final int folder_list_item=0x7f070005;
+    public static final int note_edit=0x7f070006;
+    public static final int note_edit_list_item=0x7f070007;
+    public static final int note_item=0x7f070008;
+    public static final int note_list=0x7f070009;
+    public static final int note_list_dropdown_menu=0x7f07000a;
+    public static final int note_list_footer=0x7f07000b;
+    public static final int settings_header=0x7f07000c;
+    public static final int widget_2x=0x7f07000d;
+    public static final int widget_4x=0x7f07000e;
   }
   public static final class menu {
-    public static final int call_note_edit=0x7f070000;
-    public static final int call_record_folder=0x7f070001;
-    public static final int note_edit=0x7f070002;
-    public static final int note_list=0x7f070003;
-    public static final int note_list_dropdown=0x7f070004;
-    public static final int note_list_options=0x7f070005;
-    public static final int sub_folder=0x7f070006;
+    public static final int call_note_edit=0x7f080000;
+    public static final int call_record_folder=0x7f080001;
+    public static final int note_edit=0x7f080002;
+    public static final int note_list=0x7f080003;
+    public static final int note_list_dropdown=0x7f080004;
+    public static final int note_list_options=0x7f080005;
+    public static final int sub_folder=0x7f080006;
   }
   public static final class plurals {
-    public static final int search_results_title=0x7f080000;
+    public static final int search_results_title=0x7f090000;
   }
   public static final class raw {
-    public static final int introduction=0x7f090000;
+    public static final int introduction=0x7f0a0000;
   }
   public static final class string {
-    public static final int alert_message_delete_folder=0x7f0a0000;
-    public static final int alert_message_delete_note=0x7f0a0001;
-    public static final int alert_message_delete_notes=0x7f0a0002;
-    public static final int alert_title_delete=0x7f0a0003;
-    public static final int app_name=0x7f0a0004;
-    public static final int app_widget2x2=0x7f0a0005;
-    public static final int app_widget4x4=0x7f0a0006;
-    public static final int button_delete=0x7f0a0007;
-    public static final int call_record_folder_name=0x7f0a0008;
-    public static final int datetime_dialog_cancel=0x7f0a0009;
-    public static final int datetime_dialog_ok=0x7f0a000a;
-    public static final int delete_remind_time_message=0x7f0a000b;
-    public static final int error_note_empty_for_clock=0x7f0a000c;
-    public static final int error_note_empty_for_send_to_desktop=0x7f0a000d;
-    public static final int error_note_not_exist=0x7f0a000e;
-    public static final int error_sdcard_export=0x7f0a000f;
-    public static final int error_sdcard_unmounted=0x7f0a0010;
-    public static final int error_sync_cancelled=0x7f0a0011;
-    public static final int error_sync_internal=0x7f0a0012;
-    public static final int error_sync_network=0x7f0a0013;
-    public static final int failed_sdcard_export=0x7f0a0014;
-    public static final int file_name_txt_format=0x7f0a0015;
-    public static final int file_path=0x7f0a0016;
-    public static final int folder_exist=0x7f0a0017;
-    public static final int format_date_ymd=0x7f0a0018;
-    public static final int format_datetime_mdhm=0x7f0a0019;
-    public static final int format_exported_file_location=0x7f0a001a;
-    public static final int format_folder_files_count=0x7f0a001b;
-    public static final int format_move_notes_to_folder=0x7f0a001c;
-    public static final int hint_foler_name=0x7f0a001d;
-    public static final int info_note_enter_desktop=0x7f0a001e;
-    public static final int menu_alert=0x7f0a001f;
-    public static final int menu_create_folder=0x7f0a0020;
-    public static final int menu_delete=0x7f0a0021;
-    public static final int menu_deselect_all=0x7f0a0022;
-    public static final int menu_export_text=0x7f0a0023;
-    public static final int menu_folder_change_name=0x7f0a0024;
-    public static final int menu_folder_delete=0x7f0a0025;
-    public static final int menu_folder_view=0x7f0a0026;
-    public static final int menu_font_large=0x7f0a0027;
-    public static final int menu_font_normal=0x7f0a0028;
-    public static final int menu_font_size=0x7f0a0029;
-    public static final int menu_font_small=0x7f0a002a;
-    public static final int menu_font_super=0x7f0a002b;
-    public static final int menu_list_mode=0x7f0a002c;
-    public static final int menu_move=0x7f0a002d;
-    public static final int menu_move_parent_folder=0x7f0a002e;
-    public static final int menu_normal_mode=0x7f0a002f;
-    public static final int menu_remove_remind=0x7f0a0030;
-    public static final int menu_search=0x7f0a0031;
-    public static final int menu_select_all=0x7f0a0032;
-    public static final int menu_select_none=0x7f0a0033;
-    public static final int menu_select_title=0x7f0a0034;
-    public static final int menu_send_to_desktop=0x7f0a0035;
-    public static final int menu_setting=0x7f0a0036;
-    public static final int menu_share=0x7f0a0037;
-    public static final int menu_sync=0x7f0a0038;
-    public static final int menu_sync_cancel=0x7f0a0039;
-    public static final int menu_title_select_folder=0x7f0a003a;
-    public static final int note_alert_expired=0x7f0a003b;
-    public static final int note_link_email=0x7f0a003c;
-    public static final int note_link_other=0x7f0a003d;
-    public static final int note_link_tel=0x7f0a003e;
-    public static final int note_link_web=0x7f0a003f;
-    public static final int notealert_enter=0x7f0a0040;
-    public static final int notealert_ok=0x7f0a0041;
-    public static final int notelist_menu_new=0x7f0a0042;
-    public static final int notelist_string_info=0x7f0a0043;
-    public static final int preferences_account_summary=0x7f0a0044;
-    public static final int preferences_account_title=0x7f0a0045;
-    public static final int preferences_add_account=0x7f0a0046;
-    public static final int preferences_bg_random_appear_title=0x7f0a0047;
-    public static final int preferences_button_sync_cancel=0x7f0a0048;
-    public static final int preferences_button_sync_immediately=0x7f0a0049;
-    public static final int preferences_dialog_change_account_title=0x7f0a004a;
-    public static final int preferences_dialog_change_account_warn_msg=0x7f0a004b;
-    public static final int preferences_dialog_select_account_tips=0x7f0a004c;
-    public static final int preferences_dialog_select_account_title=0x7f0a004d;
-    public static final int preferences_last_sync_time=0x7f0a004e;
-    public static final int preferences_last_sync_time_format=0x7f0a004f;
-    public static final int preferences_menu_cancel=0x7f0a0050;
-    public static final int preferences_menu_change_account=0x7f0a0051;
-    public static final int preferences_menu_remove_account=0x7f0a0052;
-    public static final int preferences_title=0x7f0a0053;
-    public static final int preferences_toast_cannot_change_account=0x7f0a0054;
-    public static final int preferences_toast_success_set_accout=0x7f0a0055;
-    public static final int search=0x7f0a0056;
-    public static final int search_hint=0x7f0a0057;
-    public static final int search_label=0x7f0a0058;
-    public static final int search_setting_description=0x7f0a0059;
-    public static final int set_remind_time_message=0x7f0a005a;
-    public static final int success_sdcard_export=0x7f0a005b;
-    public static final int success_sync_account=0x7f0a005c;
-    public static final int sync_progress_init_list=0x7f0a005d;
-    public static final int sync_progress_login=0x7f0a005e;
-    public static final int sync_progress_syncing=0x7f0a005f;
-    public static final int ticker_cancel=0x7f0a0060;
-    public static final int ticker_fail=0x7f0a0061;
-    public static final int ticker_success=0x7f0a0062;
-    public static final int ticker_syncing=0x7f0a0063;
-    public static final int widget_havenot_content=0x7f0a0064;
-    public static final int widget_under_visit_mode=0x7f0a0065;
+    public static final int alert_message_delete_folder=0x7f0b0000;
+    public static final int alert_message_delete_note=0x7f0b0001;
+    public static final int alert_message_delete_notes=0x7f0b0002;
+    public static final int alert_title_delete=0x7f0b0003;
+    public static final int app_name=0x7f0b0004;
+    public static final int app_widget2x2=0x7f0b0005;
+    public static final int app_widget4x4=0x7f0b0006;
+    public static final int button_delete=0x7f0b0007;
+    public static final int call_record_folder_name=0x7f0b0008;
+    public static final int datetime_dialog_cancel=0x7f0b0009;
+    public static final int datetime_dialog_ok=0x7f0b000a;
+    public static final int delete_remind_time_message=0x7f0b000b;
+    public static final int error_note_empty_for_clock=0x7f0b000c;
+    public static final int error_note_empty_for_send_to_desktop=0x7f0b000d;
+    public static final int error_note_not_exist=0x7f0b000e;
+    public static final int error_sdcard_export=0x7f0b000f;
+    public static final int error_sdcard_unmounted=0x7f0b0010;
+    public static final int error_sync_cancelled=0x7f0b0011;
+    public static final int error_sync_internal=0x7f0b0012;
+    public static final int error_sync_network=0x7f0b0013;
+    public static final int failed_sdcard_export=0x7f0b0014;
+    public static final int file_name_txt_format=0x7f0b0015;
+    public static final int file_path=0x7f0b0016;
+    public static final int folder_exist=0x7f0b0017;
+    public static final int format_date_ymd=0x7f0b0018;
+    public static final int format_datetime_mdhm=0x7f0b0019;
+    public static final int format_exported_file_location=0x7f0b001a;
+    public static final int format_folder_files_count=0x7f0b001b;
+    public static final int format_move_notes_to_folder=0x7f0b001c;
+    public static final int hint_foler_name=0x7f0b001d;
+    public static final int info_note_enter_desktop=0x7f0b001e;
+    public static final int menu_alert=0x7f0b001f;
+    public static final int menu_create_folder=0x7f0b0020;
+    public static final int menu_delete=0x7f0b0021;
+    public static final int menu_deselect_all=0x7f0b0022;
+    public static final int menu_export_text=0x7f0b0023;
+    public static final int menu_folder_change_name=0x7f0b0024;
+    public static final int menu_folder_delete=0x7f0b0025;
+    public static final int menu_folder_view=0x7f0b0026;
+    public static final int menu_font_large=0x7f0b0027;
+    public static final int menu_font_normal=0x7f0b0028;
+    public static final int menu_font_size=0x7f0b0029;
+    public static final int menu_font_small=0x7f0b002a;
+    public static final int menu_font_super=0x7f0b002b;
+    public static final int menu_list_mode=0x7f0b002c;
+    public static final int menu_move=0x7f0b002d;
+    public static final int menu_move_parent_folder=0x7f0b002e;
+    public static final int menu_normal_mode=0x7f0b002f;
+    public static final int menu_remove_remind=0x7f0b0030;
+    public static final int menu_search=0x7f0b0031;
+    public static final int menu_select_all=0x7f0b0032;
+    public static final int menu_select_none=0x7f0b0033;
+    public static final int menu_select_title=0x7f0b0034;
+    public static final int menu_send_to_desktop=0x7f0b0035;
+    public static final int menu_setting=0x7f0b0036;
+    public static final int menu_share=0x7f0b0037;
+    public static final int menu_sync=0x7f0b0038;
+    public static final int menu_sync_cancel=0x7f0b0039;
+    public static final int menu_title_select_folder=0x7f0b003a;
+    public static final int note_alert_expired=0x7f0b003b;
+    public static final int note_link_email=0x7f0b003c;
+    public static final int note_link_other=0x7f0b003d;
+    public static final int note_link_tel=0x7f0b003e;
+    public static final int note_link_web=0x7f0b003f;
+    public static final int notealert_enter=0x7f0b0040;
+    public static final int notealert_ok=0x7f0b0041;
+    public static final int notelist_menu_new=0x7f0b0042;
+    public static final int notelist_string_info=0x7f0b0043;
+    public static final int preferences_account_summary=0x7f0b0044;
+    public static final int preferences_account_title=0x7f0b0045;
+    public static final int preferences_add_account=0x7f0b0046;
+    public static final int preferences_bg_random_appear_title=0x7f0b0047;
+    public static final int preferences_button_sync_cancel=0x7f0b0048;
+    public static final int preferences_button_sync_immediately=0x7f0b0049;
+    public static final int preferences_dialog_change_account_title=0x7f0b004a;
+    public static final int preferences_dialog_change_account_warn_msg=0x7f0b004b;
+    public static final int preferences_dialog_select_account_tips=0x7f0b004c;
+    public static final int preferences_dialog_select_account_title=0x7f0b004d;
+    public static final int preferences_last_sync_time=0x7f0b004e;
+    public static final int preferences_last_sync_time_format=0x7f0b004f;
+    public static final int preferences_menu_cancel=0x7f0b0050;
+    public static final int preferences_menu_change_account=0x7f0b0051;
+    public static final int preferences_menu_remove_account=0x7f0b0052;
+    public static final int preferences_title=0x7f0b0053;
+    public static final int preferences_toast_cannot_change_account=0x7f0b0054;
+    public static final int preferences_toast_success_set_accout=0x7f0b0055;
+    public static final int search=0x7f0b0056;
+    public static final int search_hint=0x7f0b0057;
+    public static final int search_label=0x7f0b0058;
+    public static final int search_setting_description=0x7f0b0059;
+    public static final int set_remind_time_message=0x7f0b005a;
+    public static final int success_sdcard_export=0x7f0b005b;
+    public static final int success_sync_account=0x7f0b005c;
+    public static final int sync_progress_init_list=0x7f0b005d;
+    public static final int sync_progress_login=0x7f0b005e;
+    public static final int sync_progress_syncing=0x7f0b005f;
+    public static final int ticker_cancel=0x7f0b0060;
+    public static final int ticker_fail=0x7f0b0061;
+    public static final int ticker_success=0x7f0b0062;
+    public static final int ticker_syncing=0x7f0b0063;
+    public static final int widget_havenot_content=0x7f0b0064;
+    public static final int widget_under_visit_mode=0x7f0b0065;
   }
   public static final class style {
-    public static final int HighlightTextAppearancePrimary=0x7f0b0000;
-    public static final int HighlightTextAppearanceSecondary=0x7f0b0001;
-    public static final int NoteActionBarStyle=0x7f0b0002;
-    public static final int NoteTheme=0x7f0b0003;
-    public static final int TextAppearanceLarge=0x7f0b0004;
-    public static final int TextAppearanceMedium=0x7f0b0005;
-    public static final int TextAppearanceNormal=0x7f0b0006;
-    public static final int TextAppearancePrimaryItem=0x7f0b0007;
-    public static final int TextAppearanceSecondaryItem=0x7f0b0008;
-    public static final int TextAppearanceSuper=0x7f0b0009;
-    public static final int TextAppearanceUnderMenuIcon=0x7f0b000a;
+    public static final int HighlightTextAppearancePrimary=0x7f0c0000;
+    public static final int HighlightTextAppearanceSecondary=0x7f0c0001;
+    public static final int NoteActionBarStyle=0x7f0c0002;
+    public static final int NoteTheme=0x7f0c0003;
+    public static final int TextAppearanceLarge=0x7f0c0004;
+    public static final int TextAppearanceMedium=0x7f0c0005;
+    public static final int TextAppearanceNormal=0x7f0c0006;
+    public static final int TextAppearancePrimaryItem=0x7f0c0007;
+    public static final int TextAppearanceSecondaryItem=0x7f0c0008;
+    public static final int TextAppearanceSuper=0x7f0c0009;
+    public static final int TextAppearanceUnderMenuIcon=0x7f0c000a;
+    public static final int menu_labels_style=0x7f0c000b;
+  }
+  public static final class styleable {
+    /**
+     * Attributes that can be used with a AddFloatingActionButton.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #AddFloatingActionButton_fab_plusIconColor net.micode.notes:fab_plusIconColor}</code></td><td></td></tr>
+     * </table>
+     * @see #AddFloatingActionButton_fab_plusIconColor
+     */
+    public static final int[] AddFloatingActionButton={
+      0x7f02000c
+    };
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_plusIconColor}
+     * attribute's value can be found in the {@link #AddFloatingActionButton} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name net.micode.notes:fab_plusIconColor
+     */
+    public static final int AddFloatingActionButton_fab_plusIconColor=0;
+    /**
+     * Attributes that can be used with a FloatingActionButton.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #FloatingActionButton_fab_colorDisabled net.micode.notes:fab_colorDisabled}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_fab_colorNormal net.micode.notes:fab_colorNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_fab_colorPressed net.micode.notes:fab_colorPressed}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_fab_icon net.micode.notes:fab_icon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_fab_size net.micode.notes:fab_size}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_fab_stroke_visible net.micode.notes:fab_stroke_visible}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_fab_title net.micode.notes:fab_title}</code></td><td></td></tr>
+     * </table>
+     * @see #FloatingActionButton_fab_colorDisabled
+     * @see #FloatingActionButton_fab_colorNormal
+     * @see #FloatingActionButton_fab_colorPressed
+     * @see #FloatingActionButton_fab_icon
+     * @see #FloatingActionButton_fab_size
+     * @see #FloatingActionButton_fab_stroke_visible
+     * @see #FloatingActionButton_fab_title
+     */
+    public static final int[] FloatingActionButton={
+      0x7f020005, 0x7f020006, 0x7f020007, 0x7f020009, 
+      0x7f02000d, 0x7f02000e, 0x7f02000f
+    };
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_colorDisabled}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name net.micode.notes:fab_colorDisabled
+     */
+    public static final int FloatingActionButton_fab_colorDisabled=0;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_colorNormal}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name net.micode.notes:fab_colorNormal
+     */
+    public static final int FloatingActionButton_fab_colorNormal=1;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_colorPressed}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name net.micode.notes:fab_colorPressed
+     */
+    public static final int FloatingActionButton_fab_colorPressed=2;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_icon}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name net.micode.notes:fab_icon
+     */
+    public static final int FloatingActionButton_fab_icon=3;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_size}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>mini</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name net.micode.notes:fab_size
+     */
+    public static final int FloatingActionButton_fab_size=4;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_stroke_visible}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name net.micode.notes:fab_stroke_visible
+     */
+    public static final int FloatingActionButton_fab_stroke_visible=5;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_title}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name net.micode.notes:fab_title
+     */
+    public static final int FloatingActionButton_fab_title=6;
+    /**
+     * Attributes that can be used with a FloatingActionsMenu.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonColorNormal net.micode.notes:fab_addButtonColorNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonColorPressed net.micode.notes:fab_addButtonColorPressed}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonPlusIconColor net.micode.notes:fab_addButtonPlusIconColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonSize net.micode.notes:fab_addButtonSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonStrokeVisible net.micode.notes:fab_addButtonStrokeVisible}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_expandDirection net.micode.notes:fab_expandDirection}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_labelStyle net.micode.notes:fab_labelStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionsMenu_fab_labelsPosition net.micode.notes:fab_labelsPosition}</code></td><td></td></tr>
+     * </table>
+     * @see #FloatingActionsMenu_fab_addButtonColorNormal
+     * @see #FloatingActionsMenu_fab_addButtonColorPressed
+     * @see #FloatingActionsMenu_fab_addButtonPlusIconColor
+     * @see #FloatingActionsMenu_fab_addButtonSize
+     * @see #FloatingActionsMenu_fab_addButtonStrokeVisible
+     * @see #FloatingActionsMenu_fab_expandDirection
+     * @see #FloatingActionsMenu_fab_labelStyle
+     * @see #FloatingActionsMenu_fab_labelsPosition
+     */
+    public static final int[] FloatingActionsMenu={
+      0x7f020000, 0x7f020001, 0x7f020002, 0x7f020003, 
+      0x7f020004, 0x7f020008, 0x7f02000a, 0x7f02000b
+    };
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_addButtonColorNormal}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name net.micode.notes:fab_addButtonColorNormal
+     */
+    public static final int FloatingActionsMenu_fab_addButtonColorNormal=0;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_addButtonColorPressed}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name net.micode.notes:fab_addButtonColorPressed
+     */
+    public static final int FloatingActionsMenu_fab_addButtonColorPressed=1;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_addButtonPlusIconColor}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name net.micode.notes:fab_addButtonPlusIconColor
+     */
+    public static final int FloatingActionsMenu_fab_addButtonPlusIconColor=2;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_addButtonSize}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>mini</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name net.micode.notes:fab_addButtonSize
+     */
+    public static final int FloatingActionsMenu_fab_addButtonSize=3;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_addButtonStrokeVisible}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name net.micode.notes:fab_addButtonStrokeVisible
+     */
+    public static final int FloatingActionsMenu_fab_addButtonStrokeVisible=4;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_expandDirection}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>down</td><td>1</td><td></td></tr>
+     * <tr><td>left</td><td>2</td><td></td></tr>
+     * <tr><td>right</td><td>3</td><td></td></tr>
+     * <tr><td>up</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name net.micode.notes:fab_expandDirection
+     */
+    public static final int FloatingActionsMenu_fab_expandDirection=5;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_labelStyle}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name net.micode.notes:fab_labelStyle
+     */
+    public static final int FloatingActionsMenu_fab_labelStyle=6;
+    /**
+     * <p>This symbol is the offset where the {@link net.micode.notes.R.attr#fab_labelsPosition}
+     * attribute's value can be found in the {@link #FloatingActionsMenu} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>left</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name net.micode.notes:fab_labelsPosition
+     */
+    public static final int FloatingActionsMenu_fab_labelsPosition=7;
   }
   public static final class xml {
-    public static final int preferences=0x7f0c0000;
-    public static final int searchable=0x7f0c0001;
-    public static final int widget_2x_info=0x7f0c0002;
-    public static final int widget_4x_info=0x7f0c0003;
+    public static final int preferences=0x7f0e0000;
+    public static final int searchable=0x7f0e0001;
+    public static final int widget_2x_info=0x7f0e0002;
+    public static final int widget_4x_info=0x7f0e0003;
   }
 }

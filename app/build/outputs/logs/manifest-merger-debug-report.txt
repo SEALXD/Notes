@@ -4,6 +4,7 @@ ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
+MERGED from [com.getbase:floatingactionbutton:1.9.0] D:\Android\.gradle\caches\transforms-2\files-2.1\5301db96b2bd76c942e202685cb9e0f7\floatingactionbutton-1.9.0\AndroidManifest.xml:2:1-14:12
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:18:1-153:12
@@ -59,6 +60,8 @@ ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:31:5-81
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:31:22-78
 application
 ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:34:5-152:19
+MERGED from [com.getbase:floatingactionbutton:1.9.0] D:\Android\.gradle\caches\transforms-2\files-2.1\5301db96b2bd76c942e202685cb9e0f7\floatingactionbutton-1.9.0\AndroidManifest.xml:12:5-20
+MERGED from [com.getbase:floatingactionbutton:1.9.0] D:\Android\.gradle\caches\transforms-2\files-2.1\5301db96b2bd76c942e202685cb9e0f7\floatingactionbutton-1.9.0\AndroidManifest.xml:12:5-20
 	android:label
 		ADDED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml:36:9-41
 	android:icon
@@ -229,6 +232,8 @@ uses-sdk
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml
+MERGED from [com.getbase:floatingactionbutton:1.9.0] D:\Android\.gradle\caches\transforms-2\files-2.1\5301db96b2bd76c942e202685cb9e0f7\floatingactionbutton-1.9.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.getbase:floatingactionbutton:1.9.0] D:\Android\.gradle\caches\transforms-2\files-2.1\5301db96b2bd76c942e202685cb9e0f7\floatingactionbutton-1.9.0\AndroidManifest.xml:8:5-10:41
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml
 INJECTED from E:\codes\app\Notes\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
