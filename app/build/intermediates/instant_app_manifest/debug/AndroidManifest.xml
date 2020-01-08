@@ -147,6 +147,26 @@
         <meta-data
             android:name="android.app.default_searchable"
             android:value=".ui.NoteEditActivity" />
+
+        <activity
+            android:name="net.micode.notes.todo.TodoListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="net.micode.notes.todo.Content"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="net.micode.notes.todo.Modify"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
     </application>
 
 </manifest>

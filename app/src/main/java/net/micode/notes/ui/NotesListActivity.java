@@ -65,6 +65,7 @@ import net.micode.notes.data.Notes;
 import net.micode.notes.data.Notes.NoteColumns;
 import net.micode.notes.gtask.remote.GTaskSyncService;
 import net.micode.notes.model.WorkingNote;
+import net.micode.notes.todo.TodoListActivity;
 import net.micode.notes.tool.BackupUtils;
 import net.micode.notes.tool.DataUtils;
 import net.micode.notes.tool.ResourceParser;
@@ -140,6 +141,15 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_list);
         initResources();
+
+        Button btn1 = (Button) findViewById(R.id.menu_new_todolist);
+        btn1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(NotesListActivity.this , TodoListActivity.class);
+                startActivity(i);
+            }
+        });
 
         /**
          * Insert an introduction when user firstly use this application
@@ -784,6 +794,12 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                 showCreateOrModifyFolderDialog(true);
                 break;
             }
+//            case R.id.menu_new_todolist: {
+//                Intent intent = new Intent(NotesListActivity.this, TodoListActivity.class);
+//                //this.startActivityForResult(intent, 103);
+//                startActivity(intent);
+//                break;
+//            }
             case R.id.menu_export_text: {
                 exportNoteToText();
                 break;

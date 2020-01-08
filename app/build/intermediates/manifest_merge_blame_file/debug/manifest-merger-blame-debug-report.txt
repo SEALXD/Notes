@@ -54,7 +54,7 @@
 34-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:31:22-78
 35
 36    <application
-36-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:33:5-149:19
+36-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:33:5-165:19
 37        android:debuggable="true"
 38        android:icon="@drawable/icon_app"
 38-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:34:9-42
@@ -267,6 +267,41 @@
 147-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:147:13-58
 148            android:value=".ui.NoteEditActivity" />
 148-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:148:13-49
-149    </application>
-150
-151</manifest>
+149
+150        <activity
+150-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:150:9-153:20
+151            android:name="net.micode.notes.todo.TodoListActivity"
+151-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:151:13-66
+152            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+152-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:152:13-69
+153        </activity>
+154        <activity
+154-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:155:9-158:20
+155            android:name="net.micode.notes.todo.Content"
+155-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:156:13-57
+156            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+156-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:157:13-69
+157        </activity>
+158        <activity
+158-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:160:9-163:20
+159            android:name="net.micode.notes.todo.Modify"
+159-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:161:13-56
+160            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+160-->C:\Users\yjy\Desktop\Notes\app\src\main\AndroidManifest.xml:162:13-69
+161        </activity>
+162
+163        <meta-data
+163-->[com.android.support:design:26.1.0] C:\Users\yjy\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:26:9-28:38
+164            android:name="android.support.VERSION"
+164-->[com.android.support:design:26.1.0] C:\Users\yjy\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:27:13-51
+165            android:value="26.1.0" />
+165-->[com.android.support:design:26.1.0] C:\Users\yjy\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:28:13-35
+166        <meta-data
+166-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\yjy\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:25:9-27:47
+167            android:name="android.arch.lifecycle.VERSION"
+167-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\yjy\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:26:13-58
+168            android:value="27.0.0-SNAPSHOT" />
+168-->[android.arch.lifecycle:runtime:1.0.0] C:\Users\yjy\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:27:13-44
+169    </application>
+170
+171</manifest>

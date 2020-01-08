@@ -146,5 +146,21 @@
         <meta-data
             android:name="android.app.default_searchable"
             android:value=".ui.NoteEditActivity" />
+
+        <activity
+            android:name="net.micode.notes.todo.TodoListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <activity
+            android:name="net.micode.notes.todo.Content"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
+        <activity
+            android:name="net.micode.notes.todo.Modify"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
+
     </application>
 </manifest>

@@ -65,6 +65,7 @@
             android:id="@android:id/checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/CustomCheckBoxTheme"
             android:focusable="false"
             android:clickable="false"
             android:visibility="gone" />

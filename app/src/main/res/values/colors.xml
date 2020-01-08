@@ -17,4 +17,5 @@
 
 <resources>
     <color name="user_query_highlight">#335b5b5b</color>
+    <color name="card_background">#ffffb9</color>
 </resources>

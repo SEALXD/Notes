@@ -17,6 +17,7 @@
 package net.micode.notes.ui;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.CheckBox;
