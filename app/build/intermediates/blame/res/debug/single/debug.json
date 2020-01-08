@@ -48,16 +48,16 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\call_record.png"
     },
     {
-        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_list_green_up.9.png.flat",
-        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\list_green_up.9.png"
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_note_edit.xml.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_edit.xml"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_sub_folder.xml.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\sub_folder.xml"
     },
     {
-        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_note_edit.xml.flat",
-        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_edit.xml"
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_list_green_up.9.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\list_green_up.9.png"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_widget_2x_blue.png.flat",
@@ -148,12 +148,12 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\edit_blue.9.png"
     },
     {
-        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_widget_2x_yellow.png.flat",
-        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\widget_2x_yellow.png"
-    },
-    {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_xinjianwenjianjia.png.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\xinjianwenjianjia.png"
+    },
+    {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_widget_2x_yellow.png.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\widget_2x_yellow.png"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_edit_title_green.9.png.flat",
@@ -272,12 +272,12 @@
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\xml\\preferences.xml"
     },
     {
-        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_note_list.xml.flat",
-        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_list.xml"
-    },
-    {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_shezhi.png.flat",
         "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\drawable-hdpi\\shezhi.png"
+    },
+    {
+        "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\menu_note_list.xml.flat",
+        "source": "E:\\codes\\app\\Notes\\app\\src\\main\\res\\menu\\note_list.xml"
     },
     {
         "merged": "E:\\codes\\app\\Notes\\app\\build\\intermediates\\res\\merged\\debug\\layout_note_edit.xml.flat",
